@@ -1,0 +1,429 @@
+2026-07-19 09:59:46.000 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '统计', '统计华北地区的销售总额', '华北地区']
+2026-07-19 15:56:52.225 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '销售总额', '统计', '统计华北地区的销售总额']
+2026-07-19 15:58:25.968 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '华北地区', '统计华北地区的销售总额', '销售总额']
+2026-07-19 15:59:36.366 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '统计华北地区的销售总额', '华北地区', '统计']
+2026-07-19 15:59:37.298 | INFO     | app.agent.nodes.recall_column:recall_column:32 - [RecallColumn] 关键词: ['销售金额', '华北地区', '统计', '销售总额', '统计华北地区的销售总额', '地区']
+2026-07-19 15:59:37.299 | INFO     | app.agent.nodes.recall_column:recall_column:37 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-19 16:01:10.654 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '统计华北地区的销售总额', '华北地区', '统计']
+2026-07-19 16:01:11.844 | INFO     | app.agent.nodes.recall_column:recall_column:32 - [RecallColumn] 关键词: ['统计', '销售金额', '华北地区', '销售总额', '统计华北地区的销售总额', '地区']
+2026-07-19 16:01:11.844 | INFO     | app.agent.nodes.recall_column:recall_column:37 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-19 16:02:31.877 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计华北地区的销售总额', '销售总额', '统计']
+2026-07-19 16:02:32.741 | INFO     | app.agent.nodes.recall_column:recall_column:32 - [RecallColumn] 关键词: ['销售总额', '统计', '地区', '统计华北地区的销售总额', '华北地区', '销售金额']
+2026-07-19 16:02:32.742 | INFO     | app.agent.nodes.recall_column:recall_column:37 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-19 16:02:33.265 | INFO     | app.agent.nodes.recall_column:recall_column:46 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_product.category', 'dim_region.region_name', 'fact_order.date_id', 'dim_date.date_id', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province']
+2026-07-19 16:04:30.168 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计华北地区的销售总额', '销售总额', '统计']
+2026-07-19 16:04:31.064 | INFO     | app.agent.nodes.recall_column:recall_column:32 - [RecallColumn] 关键词: ['华北地区', '统计', '销售总额', '地区', '统计华北地区的销售总额', '销售金额']
+2026-07-19 16:04:31.064 | INFO     | app.agent.nodes.recall_column:recall_column:37 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-19 16:04:31.778 | INFO     | app.agent.nodes.recall_column:recall_column:46 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.order_amount', 'fact_order.order_quantity', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country']
+2026-07-20 09:23:12.404 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '华北地区', '统计', '销售总额']
+2026-07-20 09:23:13.375 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['地区', '销售总额', '统计华北地区的销售总额', '华北地区', '统计', '销售金额']
+2026-07-20 09:23:13.375 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 09:24:26.657 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '华北地区', '销售总额', '统计华北地区的销售总额']
+2026-07-20 09:24:27.554 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '统计', '地区', '华北地区', '销售总额', '统计华北地区的销售总额']
+2026-07-20 09:24:27.555 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 09:24:28.528 | INFO     | app.agent.nodes.recall_metric:recall_metric:28 - [RecallMetric] 关键词: ['销售额', '地区销售额', '统计', '区域销售额', '华北地区', '销售收入', '销售总额', '统计华北地区的销售总额']
+2026-07-20 09:24:28.528 | INFO     | app.agent.nodes.recall_metric:recall_metric:31 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 09:24:29.227 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.category', 'dim_region.region_name', 'dim_date.date_id', 'fact_order.date_id', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'dim_product.product_name']
+2026-07-20 09:24:29.264 | INFO     | app.agent.nodes.recall_metric:recall_metric:41 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 10:40:16.192 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计', '统计华北地区的销售总额', '销售总额']
+2026-07-20 10:40:17.210 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '统计', '华北地区', '统计华北地区的销售总额', '销售总额', '地区名称']
+2026-07-20 10:40:17.211 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 10:40:18.029 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售额', '统计', '销售收入', '华北地区', '统计华北地区的销售总额', '区域销售额', '销售总额', '地区销售额']
+2026-07-20 10:40:18.029 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 10:40:18.821 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计', '华北地区', '统计华北地区的销售总额', '销售总额']
+2026-07-20 10:40:18.859 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 10:46:48.199 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '统计', '统计华北地区的销售总额', '华北地区']
+2026-07-20 10:46:49.066 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '地区名称', '统计', '销售总额', '统计华北地区的销售总额', '华北地区']
+2026-07-20 10:46:49.066 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 10:46:49.931 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售额', '区域销售额', '统计', '销售总额', '地区销售额', '统计华北地区的销售总额', '销售收入', '华北地区']
+2026-07-20 10:46:49.931 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 10:46:50.721 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计', '销售总额', '统计华北地区的销售总额', '华北地区']
+2026-07-20 10:46:50.739 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 10:46:51.407 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 10:46:51.433 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_region.region_name', 'dim_region.country', 'dim_region.region_id', 'fact_order.region_id', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id', 'dim_product.product_name', 'dim_region.province']
+2026-07-20 19:11:07.805 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '华北地区', '统计华北地区的销售总额', '销售总额']
+2026-07-20 19:11:08.782 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '地区', '销售金额', '销售总额', '统计华北地区的销售总额', '统计']
+2026-07-20 19:11:08.783 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 19:11:09.673 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['华北地区', '地区销售额', '销售收入', '销售总额', '区域销售总额', '统计华北地区的销售总额', '统计', '销售额']
+2026-07-20 19:11:09.673 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 19:11:10.473 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '总额', '销售总额', '统计华北地区的销售总额', '销售', '统计']
+2026-07-20 19:11:10.521 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 19:11:10.895 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.product_name', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id']
+2026-07-20 19:11:10.952 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 19:13:21.936 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '统计华北地区的销售总额', '华北地区', '销售总额']
+2026-07-20 19:13:22.973 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['地区', '统计', '统计华北地区的销售总额', '华北地区', '销售金额', '销售总额']
+2026-07-20 19:13:22.973 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 19:13:23.785 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['区域销售额', '地区销售额', '销售额', '统计', '统计华北地区的销售总额', '华北地区', '销售收入', '销售总额']
+2026-07-20 19:13:23.785 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 19:13:24.398 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计', '统计华北地区的销售总额', '华北地区', '销售总额']
+2026-07-20 19:13:24.417 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 19:13:25.064 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id', 'dim_customer.customer_name', 'dim_product.product_name']
+2026-07-20 19:13:25.214 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 19:14:05.462 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '华北地区', '统计华北地区的销售总额', '统计']
+2026-07-20 19:14:06.404 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '统计', '销售金额', '销售总额', '统计华北地区的销售总额', '地区']
+2026-07-20 19:14:06.404 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 19:14:07.335 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售收入', '华北地区', '统计', '销售总额', '区域销售总额', '地区销售额', '销售额', '统计华北地区的销售总额']
+2026-07-20 19:14:07.335 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 19:14:07.994 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '华北地区', '统计', '总额', '销售总额', '统计华北地区的销售总额']
+2026-07-20 19:14:08.012 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 19:14:08.595 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id', 'dim_customer.customer_name', 'dim_product.product_name']
+2026-07-20 19:14:08.636 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 21:39:23.290 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '销售总额', '华北地区', '统计华北地区的销售总额']
+2026-07-20 21:39:24.336 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '销售总额', '华北地区', '统计华北地区的销售总额', '地区', '统计']
+2026-07-20 21:39:24.337 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 21:39:25.542 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售总额', '华北地区', '区域销售总额', '销售收入', '统计华北地区的销售总额', '销售额', '统计', '地区销售额']
+2026-07-20 21:39:25.542 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 21:39:26.223 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售总额', '华北地区', '销售', '统计华北地区的销售总额', '统计']
+2026-07-20 21:39:26.296 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 21:39:27.133 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.product_name', 'dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id']
+2026-07-20 21:39:27.205 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 21:39:52.611 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计', '统计华北地区的销售总额', '销售总额']
+2026-07-20 21:39:53.332 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['地区', '统计华北地区的销售总额', '销售金额', '统计', '华北地区', '销售总额']
+2026-07-20 21:39:53.332 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 21:39:54.247 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售收入', '销售额', '统计华北地区的销售总额', '区域销售总额', '统计', '华北地区', '地区销售额', '销售总额']
+2026-07-20 21:39:54.248 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 21:39:54.917 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计华北地区的销售总额', '统计', '华北地区', '销售总额']
+2026-07-20 21:39:54.936 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 21:39:55.933 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id', 'dim_product.product_name']
+2026-07-20 21:39:55.960 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 21:43:48.615 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '华北地区', '销售总额', '统计']
+2026-07-20 21:43:49.304 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '销售金额', '统计', '统计华北地区的销售总额', '销售总额', '地区']
+2026-07-20 21:43:49.304 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 21:43:50.092 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['地区销售额', '华北地区', '统计', '销售额', '统计华北地区的销售总额', '销售总额', '区域销售额']
+2026-07-20 21:43:50.093 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 7 个关键词
+2026-07-20 21:43:50.999 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '销售', '统计', '统计华北地区的销售总额', '销售总额']
+2026-07-20 21:43:51.016 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 21:43:51.395 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id', 'dim_product.product_name']
+2026-07-20 21:43:51.538 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 21:43:51.735 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:72 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-20 21:46:40.464 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '统计', '华北地区', '统计华北地区的销售总额']
+2026-07-20 21:46:41.160 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '统计华北地区的销售总额', '地区', '统计', '销售总额', '销售金额']
+2026-07-20 21:46:41.160 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-20 21:46:42.115 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['华北地区', '统计华北地区的销售总额', '销售额', '区域销售额', '销售收入', '统计', '地区销售额', '销售总额']
+2026-07-20 21:46:42.116 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-20 21:46:42.754 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '华北地区', '统计华北地区的销售总额', '统计', '销售总额']
+2026-07-20 21:46:42.781 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-20 21:46:43.162 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id', 'dim_product.product_name', 'dim_customer.customer_name']
+2026-07-20 21:46:43.337 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-20 21:46:43.373 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:72 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 11:53:33.102 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '统计', '华北地区', '销售总额']
+2026-07-21 11:53:34.364 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '地区', '销售总额', '统计华北地区的销售总额', '统计', '华北地区']
+2026-07-21 11:53:34.365 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 11:53:35.281 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['地区销售额', '销售收入', '销售总额', '统计华北地区的销售总额', '统计', '销售额', '区域销售额', '华北地区']
+2026-07-21 11:53:35.282 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 11:53:36.124 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['总额', '销售', '销售总额', '统计华北地区的销售总额', '统计', '华北地区']
+2026-07-21 11:53:36.167 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 11:53:36.594 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'dim_product.product_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 11:53:36.610 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 11:56:01.946 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '销售总额', '统计', '统计华北地区的销售总额']
+2026-07-21 11:56:03.062 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '地区名称', '统计', '销售总额', '统计华北地区的销售总额', '华北地区']
+2026-07-21 11:56:03.062 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 11:56:03.992 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售收入', '销售额', '统计', '区域销售总额', '销售总额', '统计华北地区的销售总额', '华北地区', '地区销售额']
+2026-07-21 11:56:03.992 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 11:56:04.611 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['统计', '销售总额', '统计华北地区的销售总额', '华北地区', '销售']
+2026-07-21 11:56:04.628 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 11:56:05.053 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 11:56:05.122 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_region.region_name', 'dim_region.country', 'dim_region.region_id', 'fact_order.region_id', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id', 'dim_product.product_name', 'dim_region.province']
+2026-07-21 11:58:51.368 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计', '销售总额', '统计华北地区的销售总额']
+2026-07-21 11:58:52.005 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['地区', '华北地区', '统计', '销售总额', '统计华北地区的销售总额', '销售金额']
+2026-07-21 11:58:52.005 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 11:58:52.871 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['区域销售总额', '华北地区', '统计', '销售总额', '统计华北地区的销售总额', '地区销售额', '销售额', '销售收入']
+2026-07-21 11:58:52.872 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 11:58:53.517 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '统计', '销售总额', '统计华北地区的销售总额', '销售']
+2026-07-21 11:58:53.533 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 11:58:54.145 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 11:58:54.160 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id', 'dim_product.product_name', 'dim_customer.customer_name']
+2026-07-21 11:58:54.197 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 11:59:49.978 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计', '统计华北地区的销售总额', '销售总额']
+2026-07-21 11:59:51.142 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['地区', '销售总额', '销售金额', '统计', '华北地区', '统计华北地区的销售总额']
+2026-07-21 11:59:51.142 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 11:59:52.001 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售额', '销售总额', '区域销售额', '销售收入', '统计', '地区销售额', '华北地区', '统计华北地区的销售总额']
+2026-07-21 11:59:52.001 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 11:59:52.698 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售总额', '统计', '华北地区', '销售', '统计华北地区的销售总额']
+2026-07-21 11:59:52.726 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 11:59:53.096 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 11:59:53.211 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 11:59:53.272 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:02:11.091 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '销售总额', '统计', '统计华北地区的销售总额']
+2026-07-21 12:02:12.294 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '销售总额', '地区', '销售金额', '统计', '统计华北地区的销售总额']
+2026-07-21 12:02:12.294 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:02:13.310 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['华北地区', '销售总额', '销售收入', '地区销售额', '区域销售额', '统计', '销售额', '统计华北地区的销售总额']
+2026-07-21 12:02:13.310 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:02:13.920 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '销售总额', '统计', '统计华北地区的销售总额', '销售']
+2026-07-21 12:02:13.945 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:02:14.357 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 12:02:14.394 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:02:14.460 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:03:28.310 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '华北地区', '统计华北地区的销售总额', '统计']
+2026-07-21 12:03:29.897 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '统计华北地区的销售总额', '销售金额', '销售总额', '统计', '地区']
+2026-07-21 12:03:29.897 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:03:30.821 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['华北地区', '统计华北地区的销售总额', '销售总额', '销售收入', '区域销售总额', '销售额', '统计', '地区销售额']
+2026-07-21 12:03:30.822 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:03:31.512 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '华北地区', '统计华北地区的销售总额', '销售总额', '统计', '总额']
+2026-07-21 12:03:31.537 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:03:31.938 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:03:32.108 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.product_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 12:03:32.173 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:07:47.933 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '华北地区', '统计华北地区的销售总额', '销售总额']
+2026-07-21 12:07:48.748 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计', '华北地区', '统计华北地区的销售总额', '地区', '销售总额', '销售金额']
+2026-07-21 12:07:48.749 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:07:49.669 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['统计', '华北地区', '统计华北地区的销售总额', '销售收入', '区域销售额', '销售额', '地区销售额', '销售总额']
+2026-07-21 12:07:49.669 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:07:50.261 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['统计', '华北地区', '销售', '统计华北地区的销售总额', '销售总额']
+2026-07-21 12:07:50.285 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:07:50.625 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'dim_region.region_name', 'dim_date.date_id', 'fact_order.date_id', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'dim_product.product_name', 'dim_customer.customer_name']
+2026-07-21 12:07:50.840 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:07:50.905 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:11:27.662 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '华北地区', '销售总额', '统计']
+2026-07-21 12:11:28.606 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '地区', '统计', '销售金额', '统计华北地区的销售总额', '销售总额']
+2026-07-21 12:11:28.606 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:11:29.650 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['华北地区', '销售额', '地区销售额', '销售收入', '区域销售额', '统计', '统计华北地区的销售总额', '销售总额']
+2026-07-21 12:11:29.651 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:11:30.375 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '统计', '统计华北地区的销售总额', '销售总额', '销售']
+2026-07-21 12:11:30.397 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:11:31.105 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:11:31.224 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id', 'dim_customer.customer_name', 'dim_product.product_name']
+2026-07-21 12:11:31.285 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:13:08.321 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '销售总额', '华北地区', '统计']
+2026-07-21 12:13:09.611 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售总额', '华北地区', '地区', '销售金额', '统计华北地区的销售总额', '统计']
+2026-07-21 12:13:09.612 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:13:10.523 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售总额', '华北地区', '销售收入', '地区销售额', '区域销售总额', '销售额', '统计华北地区的销售总额', '统计']
+2026-07-21 12:13:10.523 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:13:11.208 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '销售总额', '总额', '华北地区', '统计华北地区的销售总额', '统计']
+2026-07-21 12:13:11.234 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:13:11.594 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 12:13:11.854 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:13:11.915 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:16:17.251 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计华北地区的销售总额', '销售总额', '统计']
+2026-07-21 12:16:18.392 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '统计华北地区的销售总额', '销售总额', '地区', '销售金额', '统计']
+2026-07-21 12:16:18.392 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:16:19.282 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['区域销售总额', '华北地区', '统计华北地区的销售总额', '销售总额', '地区销售额', '销售额', '销售收入', '统计']
+2026-07-21 12:16:19.283 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:16:19.791 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '统计华北地区的销售总额', '销售总额', '销售', '统计']
+2026-07-21 12:16:19.813 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:16:20.171 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 12:16:20.383 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:16:20.445 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:17:42.834 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '华北地区', '统计', '销售总额']
+2026-07-21 12:17:44.057 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计', '销售金额', '华北地区', '统计华北地区的销售总额', '地区', '销售总额']
+2026-07-21 12:17:44.057 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:17:44.829 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['统计', '区域销售额', '华北地区', '地区销售额', '统计华北地区的销售总额', '销售额', '销售收入', '销售总额']
+2026-07-21 12:17:44.830 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:17:45.453 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['统计', '华北地区', '销售', '统计华北地区的销售总额', '销售总额']
+2026-07-21 12:17:45.479 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:17:46.119 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:17:46.134 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'dim_region.region_name', 'dim_date.date_id', 'fact_order.date_id', 'dim_customer.customer_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'dim_product.product_name']
+2026-07-21 12:17:46.202 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:21:05.612 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '统计华北地区的销售总额', '销售总额', '统计']
+2026-07-21 12:21:07.039 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '销售总额', '华北地区', '统计', '统计华北地区的销售总额', '地区']
+2026-07-21 12:21:07.039 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:21:07.854 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售总额', '华北地区', '销售额', '统计', '统计华北地区的销售总额', '区域销售总额', '地区销售额', '销售收入']
+2026-07-21 12:21:07.854 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:21:08.545 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售总额', '华北地区', '统计', '统计华北地区的销售总额', '销售']
+2026-07-21 12:21:08.566 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:21:08.918 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:21:09.115 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.product_name', 'dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 12:21:09.180 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:24:11.265 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '华北地区', '统计', '统计华北地区的销售总额']
+2026-07-21 12:24:12.659 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售总额', '销售金额', '统计', '统计华北地区的销售总额', '华北地区', '地区']
+2026-07-21 12:24:12.659 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:24:13.736 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售总额', '销售额', '统计', '地区销售额', '统计华北地区的销售总额', '区域销售额', '华北地区', '销售收入']
+2026-07-21 12:24:13.736 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:24:14.605 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售总额', '统计', '统计华北地区的销售总额', '销售', '华北地区']
+2026-07-21 12:24:14.627 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:24:15.041 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:24:15.163 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_product.category', 'dim_region.region_name', 'dim_date.date_id', 'fact_order.date_id', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country']
+2026-07-21 12:24:15.223 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:26:54.881 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '统计', '华北地区', '销售总额']
+2026-07-21 12:26:55.858 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '地区', '统计华北地区的销售总额', '华北地区', '销售总额', '统计']
+2026-07-21 12:26:55.858 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:26:56.639 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['区域销售额', '地区销售额', '统计华北地区的销售总额', '华北地区', '销售额', '销售总额', '统计']
+2026-07-21 12:26:56.640 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 7 个关键词
+2026-07-21 12:26:57.218 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计华北地区的销售总额', '华北地区', '销售总额', '统计']
+2026-07-21 12:26:57.240 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:26:57.596 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:26:57.772 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'dim_product.product_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 12:26:57.839 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:56:00.377 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '华北地区', '统计', '销售总额']
+2026-07-21 12:56:01.551 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['地区', '统计华北地区的销售总额', '华北地区', '销售金额', '统计', '销售总额']
+2026-07-21 12:56:01.551 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:56:02.617 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['地区销售额', '统计华北地区的销售总额', '华北地区', '销售收入', '统计', '销售额', '区域销售额', '销售总额']
+2026-07-21 12:56:02.618 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:56:03.379 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['统计华北地区的销售总额', '华北地区', '统计', '销售', '销售总额']
+2026-07-21 12:56:03.394 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:56:03.698 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id', 'dim_product.product_name']
+2026-07-21 12:56:03.742 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:56:03.774 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 12:57:30.405 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '销售总额', '华北地区', '统计华北地区的销售总额']
+2026-07-21 12:57:31.496 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计华北地区的销售总额', '销售总额', '地区', '统计', '销售金额', '华北地区']
+2026-07-21 12:57:31.497 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 12:57:32.471 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售收入', '区域销售额', '华北地区', '统计华北地区的销售总额', '销售总额', '统计', '销售额', '地区销售额']
+2026-07-21 12:57:32.471 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 12:57:33.235 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '统计华北地区的销售总额', '销售总额', '统计', '销售']
+2026-07-21 12:57:33.250 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 12:57:33.572 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 12:57:33.817 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_region.region_name', 'dim_product.product_name', 'dim_customer.customer_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 12:57:33.849 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 13:22:31.184 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '销售总额', '华北地区', '统计']
+2026-07-21 13:22:32.083 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计华北地区的销售总额', '销售总额', '销售金额', '地区', '统计', '华北地区']
+2026-07-21 13:22:32.083 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 13:22:33.154 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['区域销售额', '地区销售额', '统计华北地区的销售总额', '销售总额', '统计', '华北地区', '销售额']
+2026-07-21 13:22:33.154 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 7 个关键词
+2026-07-21 13:22:34.023 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计华北地区的销售总额', '销售总额', '统计', '华北地区']
+2026-07-21 13:22:34.036 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 13:22:34.362 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_region.region_name', 'dim_product.product_name', 'dim_customer.customer_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 13:22:34.553 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 13:22:34.584 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 13:23:08.388 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '华北地区', '统计华北地区的销售总额', '销售总额']
+2026-07-21 13:23:09.162 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计', '销售总额', '华北地区', '地区', '统计华北地区的销售总额', '销售金额']
+2026-07-21 13:23:09.162 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 13:23:10.060 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['统计', '销售收入', '销售总额', '华北地区', '销售额', '地区销售额', '统计华北地区的销售总额', '区域销售额']
+2026-07-21 13:23:10.060 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 13:23:10.744 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['统计', '销售总额', '华北地区', '销售', '统计华北地区的销售总额']
+2026-07-21 13:23:10.758 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 13:23:11.073 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 13:23:11.106 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.category', 'dim_region.region_name', 'dim_date.date_id', 'fact_order.date_id', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country']
+2026-07-21 13:23:11.135 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 13:23:43.161 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['华北地区', '销售总额', '统计华北地区的销售总额', '统计']
+2026-07-21 13:23:43.894 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计华北地区的销售总额', '华北地区', '销售金额', '统计', '销售总额', '地区']
+2026-07-21 13:23:43.894 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 13:23:44.682 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['统计华北地区的销售总额', '销售收入', '华北地区', '区域销售额', '统计', '销售总额', '地区销售额', '销售额']
+2026-07-21 13:23:44.683 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 13:23:45.914 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['统计华北地区的销售总额', '销售', '华北地区', '统计', '销售总额']
+2026-07-21 13:23:45.927 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 13:23:46.229 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'dim_customer.customer_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id', 'dim_product.product_name']
+2026-07-21 13:23:46.264 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 13:23:46.291 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 13:39:21.143 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['销售总额', '华北地区', '统计华北地区的销售总额', '统计']
+2026-07-21 13:39:22.126 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['华北地区', '地区', '销售总额', '销售金额', '统计华北地区的销售总额', '统计']
+2026-07-21 13:39:22.126 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 13:39:23.105 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['华北地区', '区域销售额', '销售额', '销售总额', '销售收入', '统计华北地区的销售总额', '地区销售额', '统计']
+2026-07-21 13:39:23.105 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 13:39:24.306 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['华北地区', '销售', '销售总额', '总额', '统计华北地区的销售总额', '统计']
+2026-07-21 13:39:24.322 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 13:39:24.815 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-21 13:39:24.902 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 13:39:24.931 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 13:39:26.004 | INFO     | app.agent.nodes.filter_table:filter_table:32 - [FillterTable] 过滤后的表信息: ['dim_region', 'fact_order']
+2026-07-21 14:11:32.061 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '统计华北地区的销售总额', '销售总额', '华北地区']
+2026-07-21 14:11:32.777 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '地区', '统计华北地区的销售总额', '华北地区', '统计', '销售总额']
+2026-07-21 14:11:32.777 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-21 14:11:33.707 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['统计华北地区的销售总额', '区域销售总额', '华北地区', '统计', '销售收入', '销售额', '销售总额', '地区销售额']
+2026-07-21 14:11:33.708 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-21 14:11:34.451 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计华北地区的销售总额', '华北地区', '统计', '销售总额']
+2026-07-21 14:11:34.469 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-21 14:11:34.832 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id', 'dim_product.product_name']
+2026-07-21 14:11:34.855 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-21 14:11:34.894 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-21 14:11:35.600 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - 过滤后的指标信息:['GMV']
+2026-07-21 14:11:35.949 | INFO     | app.agent.nodes.filter_table:filter_table:32 - [FillterTable] 过滤后的表信息: ['fact_order', 'dim_region']
+2026-07-22 10:02:32.196 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '华北地区', '销售总额', '统计']
+2026-07-22 10:02:33.015 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['地区', '销售总额', '销售金额', '统计华北地区的销售总额', '统计', '华北地区']
+2026-07-22 10:02:33.015 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-22 10:02:34.161 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售收入', '地区销售额', '销售总额', '销售额', '统计华北地区的销售总额', '区域销售额', '统计', '华北地区']
+2026-07-22 10:02:34.161 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-22 10:02:34.927 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '销售总额', '统计华北地区的销售总额', '统计', '华北地区']
+2026-07-22 10:02:35.053 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-22 10:02:35.458 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.region_id', 'dim_region.region_id', 'dim_region.country', 'dim_region.province', 'fact_order.order_amount', 'fact_order.order_quantity', 'dim_product.product_name', 'dim_customer.customer_name', 'dim_product.category', 'dim_date.date_id', 'fact_order.date_id']
+2026-07-22 10:02:35.581 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-22 10:02:35.689 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-22 10:02:36.624 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - 过滤后的指标信息:['GMV']
+2026-07-22 10:02:36.632 | INFO     | app.agent.nodes.filter_table:filter_table:32 - [FillterTable] 过滤后的表信息: ['dim_region', 'fact_order']
+2026-07-22 10:02:36.645 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:21 - 获取数据库信息: {'version': '8.0.46', 'dialect': 'mysql'}
+2026-07-22 10:02:36.645 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:22 - 获取日期信息: {'date': '2026-07-22', 'weekday': 'Wednesday', 'quarter': '3'}
+2026-07-22 11:23:30.463 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计', '华北地区', '统计华北地区的销售总额', '销售总额']
+2026-07-22 11:23:31.223 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '统计', '华北地区', '地区', '销售总额', '统计华北地区的销售总额']
+2026-07-22 11:23:31.223 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-22 11:23:32.115 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['区域销售额', '地区销售额', '统计', '华北地区', '销售额', '销售总额', '统计华北地区的销售总额']
+2026-07-22 11:23:32.115 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 7 个关键词
+2026-07-22 11:23:32.862 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['统计', '华北地区', '销售总额', '销售', '统计华北地区的销售总额']
+2026-07-22 11:23:32.878 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-22 11:23:33.355 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['fact_order.order_amount', 'fact_order.order_quantity', 'dim_customer.customer_name', 'dim_product.category', 'dim_region.region_name', 'dim_date.date_id', 'fact_order.date_id', 'dim_region.region_id', 'fact_order.region_id', 'dim_region.province', 'dim_region.country', 'dim_product.product_name']
+2026-07-22 11:23:33.548 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-22 11:23:33.586 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-22 11:23:34.391 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - 过滤后的指标信息:['GMV']
+2026-07-22 11:23:34.498 | INFO     | app.agent.nodes.filter_table:filter_table:33 - [FillterTable] 过滤后的表信息: ['fact_order', 'dim_region']
+2026-07-22 11:23:34.511 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:21 - 获取数据库信息: {'version': '8.0.46', 'dialect': 'mysql'}
+2026-07-22 11:23:34.512 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:22 - 获取日期信息: {'date': '2026-07-22', 'weekday': 'Wednesday', 'quarter': '3'}
+2026-07-22 11:23:35.672 | INFO     | app.agent.nodes.generate_sql:generate_sql:36 - SQL语句生成完成:SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-22 19:57:14.174 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - 抽取关键词完成，关键词为：['统计华北地区的销售总额', '华北地区', '统计', '销售总额']
+2026-07-22 19:57:15.152 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售地区', '销售金额', '统计华北地区的销售总额', '销售总额', '统计', '华北地区']
+2026-07-22 19:57:15.153 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 批量向量化 6 个关键词
+2026-07-22 19:57:16.087 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词: ['销售收入', '统计华北地区的销售总额', '销售总额', '统计', '华北地区', '销售额', '地区销售额', '区域销售总额']
+2026-07-22 19:57:16.088 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 批量向量化 8 个关键词
+2026-07-22 19:57:16.689 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词: ['销售', '统计华北地区的销售总额', '销售总额', '统计', '华北地区']
+2026-07-22 19:57:16.792 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 字段取值: ['dim_region.region_name.华北']
+2026-07-22 19:57:17.197 | INFO     | app.agent.nodes.recall_metric:recall_metric:43 - [RecallMetric] 检索到字段信息['GMV', 'AOV']
+2026-07-22 19:57:17.320 | INFO     | app.agent.nodes.recall_column:recall_column:45 - [RecallColumn] 检索到字段信息['dim_region.region_name', 'fact_order.order_quantity', 'fact_order.region_id', 'dim_region.region_id', 'fact_order.order_amount', 'dim_region.province', 'dim_customer.customer_name', 'dim_product.product_name', 'dim_product.category', 'fact_order.date_id', 'dim_date.date_id', 'dim_region.country']
+2026-07-22 19:57:17.394 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:84 - [MergeRetrievedInfo] 合并召回信息完成
+2026-07-22 19:57:18.272 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - 过滤后的指标信息:['GMV']
+2026-07-22 19:57:18.541 | INFO     | app.agent.nodes.filter_table:filter_table:33 - [FillterTable] 过滤后的表信息: ['dim_region', 'fact_order']
+2026-07-22 19:57:18.555 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:21 - 获取数据库信息: {'version': '8.0.46', 'dialect': 'mysql'}
+2026-07-22 19:57:18.555 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:22 - 获取日期信息: {'date': '2026-07-22', 'weekday': 'Wednesday', 'quarter': '3'}
+2026-07-22 19:57:19.802 | INFO     | app.agent.nodes.generate_sql:generate_sql:36 - SQL语句生成完成:SELECT SUM(t2.order_amount) AS sales_total
+FROM dim_region t1
+JOIN fact_order t2 ON t1.region_id = t2.region_id
+WHERE t1.region_name = '华北';
+2026-07-22 19:57:19.809 | INFO     | app.agent.nodes.validate_sql:validate_sql:14 - [ValidateSQL] 校验SQL语句成功😄
+2026-07-22 20:03:45.370 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - [ExtractKeywords] 抽取关键词完成: ['销售总额', '统计华北地区的销售总额', '华北地区', '统计']
+2026-07-22 20:03:46.015 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售总额', '地区', '统计', '统计华北地区的销售总额', '销售金额', '华北地区']
+2026-07-22 20:03:46.016 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 正在向量化 6 个关键词...
+2026-07-22 20:03:46.965 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词扩展完成: ['销售总额', '统计', '统计华北地区的销售总额', '销售收入', '地区销售额', '区域销售额', '销售额', '华北地区']
+2026-07-22 20:03:46.965 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 正在向量化 8 个关键词...
+2026-07-22 20:03:47.555 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词扩展完成: ['销售总额', '统计', '统计华北地区的销售总额', '销售', '华北地区']
+2026-07-22 20:03:47.576 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 检索完成: 1 个字段取值 (去重后)
+2026-07-22 20:03:47.818 | INFO     | app.agent.nodes.recall_column:recall_column:38 - [RecallColumn] 向量化完成，开始向量检索...
+2026-07-22 20:03:48.028 | INFO     | app.agent.nodes.recall_column:recall_column:46 - [RecallColumn] 检索完成: 12 个字段 (去重后)
+2026-07-22 20:03:48.068 | INFO     | app.agent.nodes.recall_metric:recall_metric:35 - [RecallMetric] 向量化完成，开始向量检索...
+2026-07-22 20:03:48.291 | INFO     | app.agent.nodes.recall_metric:recall_metric:44 - [RecallMetric] 检索完成: 2 个指标 (去重后)
+2026-07-22 20:03:48.292 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:49 - [MergeRetrievedInfo] 字段按表分组: 5 张表
+2026-07-22 20:03:48.331 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:91 - [MergeRetrievedInfo] 合并完成: 5 张表, 2 个指标
+2026-07-22 20:03:49.053 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - [FilterMetric] 过滤后的指标信息: ['GMV']
+2026-07-22 20:03:49.053 | INFO     | app.agent.nodes.filter_metric:filter_metric:33 - [FilterMetric] 输入 2 个指标 → 输出 1 个指标
+2026-07-22 20:03:49.300 | INFO     | app.agent.nodes.filter_table:filter_table:32 - [FilterTable] 过滤后的表信息: ['fact_order', 'dim_region']
+2026-07-22 20:03:49.300 | INFO     | app.agent.nodes.filter_table:filter_table:33 - [FilterTable] 输入 5 张表 → 输出 2 张表
+2026-07-22 20:03:49.315 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:21 - [AddExtraContext] 数据库信息: {'version': '8.0.46', 'dialect': 'mysql'}
+2026-07-22 20:03:49.315 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:22 - [AddExtraContext] 日期信息: {'date': '2026-07-22', 'weekday': 'Wednesday', 'quarter': '3'}
+2026-07-22 20:03:49.316 | INFO     | app.agent.nodes.generate_sql:generate_sql:20 - [GenerateSQL] 输入: 2 张表, 1 个指标
+2026-07-22 20:03:50.530 | INFO     | app.agent.nodes.generate_sql:generate_sql:36 - [GenerateSQL] 生成完成: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-22 20:03:50.536 | INFO     | app.agent.nodes.validate_sql:validate_sql:14 - [ValidateSQL] 校验通过
+2026-07-22 20:03:50.537 | INFO     | app.agent.nodes.run_sql:run_sql:13 - [RunSQL] 执行SQL: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-22 20:16:51.399 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - [ExtractKeywords] 抽取关键词完成: ['统计华北地区的销售总额', '华北地区', '统计', '销售总额']
+2026-07-22 20:16:52.318 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['销售金额', '地区', '销售总额', '统计华北地区的销售总额', '华北地区', '统计']
+2026-07-22 20:16:52.318 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 正在向量化 6 个关键词...
+2026-07-22 20:16:53.145 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词扩展完成: ['地区销售额', '区域销售额', '销售总额', '销售额', '统计华北地区的销售总额', '华北地区', '统计']
+2026-07-22 20:16:53.145 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 正在向量化 7 个关键词...
+2026-07-22 20:16:53.882 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词扩展完成: ['销售', '销售总额', '统计华北地区的销售总额', '华北地区', '统计']
+2026-07-22 20:16:53.905 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 检索完成: 1 个字段取值 (去重后)
+2026-07-22 20:16:54.253 | INFO     | app.agent.nodes.recall_column:recall_column:38 - [RecallColumn] 向量化完成，开始向量检索...
+2026-07-22 20:16:54.317 | INFO     | app.agent.nodes.recall_metric:recall_metric:35 - [RecallMetric] 向量化完成，开始向量检索...
+2026-07-22 20:16:54.392 | INFO     | app.agent.nodes.recall_column:recall_column:46 - [RecallColumn] 检索完成: 12 个字段 (去重后)
+2026-07-22 20:16:54.428 | INFO     | app.agent.nodes.recall_metric:recall_metric:44 - [RecallMetric] 检索完成: 2 个指标 (去重后)
+2026-07-22 20:16:54.429 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:49 - [MergeRetrievedInfo] 字段按表分组: 5 张表
+2026-07-22 20:16:54.467 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:91 - [MergeRetrievedInfo] 合并完成: 5 张表, 2 个指标
+2026-07-22 20:16:55.485 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - [FilterMetric] 过滤后的指标信息: ['GMV']
+2026-07-22 20:16:55.485 | INFO     | app.agent.nodes.filter_metric:filter_metric:33 - [FilterMetric] 输入 2 个指标 → 输出 1 个指标
+2026-07-22 20:16:55.522 | INFO     | app.agent.nodes.filter_table:filter_table:32 - [FilterTable] 过滤后的表信息: ['fact_order', 'dim_region']
+2026-07-22 20:16:55.522 | INFO     | app.agent.nodes.filter_table:filter_table:33 - [FilterTable] 输入 5 张表 → 输出 2 张表
+2026-07-22 20:16:55.537 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:21 - [AddExtraContext] 数据库信息: {'version': '8.0.46', 'dialect': 'mysql'}
+2026-07-22 20:16:55.537 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:22 - [AddExtraContext] 日期信息: {'date': '2026-07-22', 'weekday': 'Wednesday', 'quarter': '3'}
+2026-07-22 20:16:55.538 | INFO     | app.agent.nodes.generate_sql:generate_sql:20 - [GenerateSQL] 输入: 2 张表, 1 个指标
+2026-07-22 20:16:56.723 | INFO     | app.agent.nodes.generate_sql:generate_sql:36 - [GenerateSQL] 生成完成: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-22 20:16:56.728 | INFO     | app.agent.nodes.validate_sql:validate_sql:14 - [ValidateSQL] 校验通过
+2026-07-22 20:16:56.729 | INFO     | app.agent.nodes.run_sql:run_sql:14 - [RunSQL] 执行SQL: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-22 20:16:56.736 | INFO     | app.agent.nodes.run_sql:run_sql:16 - [RunSQL] SQL执行结果: [{'sales_total': 41099.5}]

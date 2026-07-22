@@ -1,0 +1,942 @@
+2026-05-30 23:01:14.582 | INFO     | __main__:build:7 - Building....
+2026-07-12 12:15:26.043 | INFO     | __main__:build:16 - Building....
+2026-07-12 12:17:34.500 | INFO     | __main__:build:16 - Building....
+2026-07-12 12:17:48.604 | INFO     | __main__:build:16 - Building....
+2026-07-12 12:21:07.287 | INFO     | __main__:build:16 - Building....
+2026-07-12 12:37:03.484 | INFO     | __main__:build:16 - Building....
+2026-07-12 12:50:05.895 | INFO     | __main__:build:16 - Building....
+2026-07-12 12:52:33.493 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 12:52:33.493 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 12:52:33.493 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 12:52:33.493 | INFO     | __main__:build:20 - [配置] 加载配置: ..\..\conf\meta_config.yaml
+2026-07-12 12:52:33.622 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 12:52:33.622 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 12:52:33.746 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 12:52:34.648 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 12:52:34.649 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 12:52:34.649 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 12:52:34.649 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 12:52:34.649 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 12:52:34.675 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=0, metrics=0
+2026-07-12 12:52:34.675 | INFO     | __main__:build:43 - [完成] 知识库构建完成！
+2026-07-12 12:52:34.681 | INFO     | __main__:build:48 - [清理] 所有连接已关闭
+2026-07-12 12:54:23.659 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 12:54:23.659 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 12:54:23.660 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 12:54:23.660 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 12:54:23.800 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 12:54:23.800 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 12:54:23.913 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 12:54:24.548 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 12:54:24.549 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 12:54:24.549 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 12:54:24.549 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 12:54:24.550 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 12:54:24.574 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=0, metrics=0
+2026-07-12 12:54:24.575 | INFO     | __main__:build:43 - [完成] 知识库构建完成！
+2026-07-12 12:54:24.581 | INFO     | __main__:build:48 - [清理] 所有连接已关闭
+2026-07-12 12:55:09.491 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 12:55:09.491 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 12:55:09.491 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 12:55:09.491 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 12:55:09.608 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 12:55:09.608 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 12:55:09.720 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 12:55:10.355 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 12:55:10.356 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 12:55:10.356 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 12:55:10.356 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 12:55:10.356 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 12:55:10.404 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 12:55:10.404 | INFO     | app.services.meta_knowledge_service:build:38 - [Build] 开始处理 5 个表
+2026-07-12 12:55:10.404 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_region
+2026-07-12 12:55:10.477 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 12:55:10.493 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:55:10.495 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 12:55:10.497 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 12:55:10.498 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 12:55:10.498 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_customer
+2026-07-12 12:55:10.501 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 12:55:10.503 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:55:10.504 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 12:55:10.505 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 12:55:10.507 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 12:55:10.507 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_product
+2026-07-12 12:55:10.509 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 12:55:10.512 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:55:10.513 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 12:55:10.514 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 12:55:10.515 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 12:55:10.515 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_date
+2026-07-12 12:55:10.517 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 12:55:10.519 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 12:55:10.520 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 12:55:10.521 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 12:55:10.522 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 12:55:10.523 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 12:55:10.523 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: fact_order
+2026-07-12 12:55:10.525 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 12:55:10.527 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 12:55:10.528 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:55:10.529 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:55:10.530 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 12:55:10.532 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:55:10.533 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 12:55:10.534 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 12:55:10.534 | INFO     | app.services.meta_knowledge_service:build:75 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 12:55:10.564 | INFO     | app.services.meta_knowledge_service:build:80 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 12:55:10.564 | INFO     | app.services.meta_knowledge_service:build:82 - [Build] 准备创建 Qdrant collection...
+2026-07-12 12:55:10.581 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: False
+2026-07-12 12:55:10.581 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:16 - [Qdrant] collection 'column_info_collection' 不存在，正在创建...
+2026-07-12 12:55:10.699 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:24 - [Qdrant] collection 'column_info_collection' 创建成功
+2026-07-12 12:55:10.700 | INFO     | app.services.meta_knowledge_service:build:84 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 12:55:10.700 | INFO     | app.services.meta_knowledge_service:build:104 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 12:55:10.700 | INFO     | app.services.meta_knowledge_service:build:110 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=20，共 5 批
+2026-07-12 12:55:10.700 | INFO     | app.services.meta_knowledge_service:build:114 - [Embedding]   batch 1/5, 共 20 条
+2026-07-12 12:55:13.725 | ERROR    | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 1 向量化失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-07-12 12:56:28.995 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 12:56:28.996 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 12:56:28.996 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 12:56:28.996 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 12:56:29.105 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 12:56:29.105 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 12:56:29.265 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 12:56:29.265 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 12:56:29.266 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 12:56:29.266 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 12:56:29.266 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 12:56:29.266 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 12:56:29.310 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 12:56:29.310 | INFO     | app.services.meta_knowledge_service:build:38 - [Build] 开始处理 5 个表
+2026-07-12 12:56:29.310 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_region
+2026-07-12 12:56:29.328 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 12:56:29.329 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:56:29.330 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 12:56:29.331 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 12:56:29.333 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 12:56:29.333 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_customer
+2026-07-12 12:56:29.334 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 12:56:29.335 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:56:29.336 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 12:56:29.337 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 12:56:29.338 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 12:56:29.339 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_product
+2026-07-12 12:56:29.340 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 12:56:29.341 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:56:29.342 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 12:56:29.343 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 12:56:29.344 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 12:56:29.344 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_date
+2026-07-12 12:56:29.346 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 12:56:29.347 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 12:56:29.348 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 12:56:29.349 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 12:56:29.350 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 12:56:29.351 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 12:56:29.351 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: fact_order
+2026-07-12 12:56:29.352 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 12:56:29.353 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 12:56:29.354 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:56:29.355 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:56:29.357 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 12:56:29.358 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:56:29.359 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 12:56:29.360 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 12:56:29.360 | INFO     | app.services.meta_knowledge_service:build:75 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 12:57:57.736 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 12:57:57.737 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 12:57:57.737 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 12:57:57.737 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 12:57:57.846 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 12:57:57.847 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 12:57:58.006 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 12:57:58.006 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 12:57:58.007 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 12:57:58.007 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 12:57:58.007 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 12:57:58.007 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 12:57:58.051 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 12:57:58.052 | INFO     | app.services.meta_knowledge_service:build:38 - [Build] 开始处理 5 个表
+2026-07-12 12:57:58.052 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_region
+2026-07-12 12:57:58.067 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 12:57:58.069 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:57:58.070 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 12:57:58.071 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 12:57:58.072 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 12:57:58.072 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_customer
+2026-07-12 12:57:58.074 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 12:57:58.075 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:57:58.076 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 12:57:58.077 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 12:57:58.078 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 12:57:58.079 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_product
+2026-07-12 12:57:58.080 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 12:57:58.081 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:57:58.082 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 12:57:58.084 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 12:57:58.085 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 12:57:58.085 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_date
+2026-07-12 12:57:58.086 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 12:57:58.088 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 12:57:58.089 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 12:57:58.090 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 12:57:58.091 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 12:57:58.092 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 12:57:58.093 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: fact_order
+2026-07-12 12:57:58.094 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 12:57:58.095 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 12:57:58.096 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:57:58.098 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:57:58.099 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 12:57:58.100 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:57:58.101 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 12:57:58.102 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 12:57:58.102 | INFO     | app.services.meta_knowledge_service:build:75 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 12:57:58.116 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:17 - [MySQL] 旧数据已清空
+2026-07-12 12:57:58.126 | INFO     | app.services.meta_knowledge_service:build:81 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 12:57:58.127 | INFO     | app.services.meta_knowledge_service:build:83 - [Build] 准备创建 Qdrant collection...
+2026-07-12 12:57:58.140 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: True
+2026-07-12 12:57:58.140 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:26 - [Qdrant] collection 'column_info_collection' 已存在，跳过创建
+2026-07-12 12:57:58.140 | INFO     | app.services.meta_knowledge_service:build:85 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 12:57:58.140 | INFO     | app.services.meta_knowledge_service:build:105 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 12:57:58.140 | INFO     | app.services.meta_knowledge_service:build:111 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=20，共 5 批
+2026-07-12 12:57:58.140 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 1/5, 共 20 条
+2026-07-12 12:57:58.215 | ERROR    | app.services.meta_knowledge_service:build:121 - [Embedding]   batch 1 向量化失败: 401, message='Unauthorized', url='https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings'
+2026-07-12 12:59:22.076 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 12:59:22.076 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 12:59:22.076 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 12:59:22.076 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 12:59:22.191 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 12:59:22.191 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 12:59:22.350 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 12:59:22.350 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 12:59:22.351 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 12:59:22.351 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 12:59:22.351 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 12:59:22.351 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 12:59:22.395 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 12:59:22.395 | INFO     | app.services.meta_knowledge_service:build:38 - [Build] 开始处理 5 个表
+2026-07-12 12:59:22.395 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_region
+2026-07-12 12:59:22.411 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 12:59:22.412 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:59:22.413 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 12:59:22.414 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 12:59:22.415 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 12:59:22.416 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_customer
+2026-07-12 12:59:22.417 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 12:59:22.419 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:59:22.420 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 12:59:22.421 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 12:59:22.423 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 12:59:22.423 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_product
+2026-07-12 12:59:22.424 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 12:59:22.425 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:59:22.427 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 12:59:22.428 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 12:59:22.429 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 12:59:22.429 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_date
+2026-07-12 12:59:22.430 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 12:59:22.432 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 12:59:22.433 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 12:59:22.434 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 12:59:22.435 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 12:59:22.436 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 12:59:22.436 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: fact_order
+2026-07-12 12:59:22.438 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 12:59:22.439 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 12:59:22.440 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 12:59:22.441 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 12:59:22.442 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 12:59:22.443 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 12:59:22.444 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 12:59:22.446 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 12:59:22.446 | INFO     | app.services.meta_knowledge_service:build:75 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 12:59:22.459 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:17 - [MySQL] 旧数据已清空
+2026-07-12 12:59:22.475 | INFO     | app.services.meta_knowledge_service:build:81 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 12:59:22.475 | INFO     | app.services.meta_knowledge_service:build:83 - [Build] 准备创建 Qdrant collection...
+2026-07-12 12:59:22.489 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: True
+2026-07-12 12:59:22.489 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:26 - [Qdrant] collection 'column_info_collection' 已存在，跳过创建
+2026-07-12 12:59:22.489 | INFO     | app.services.meta_knowledge_service:build:85 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 12:59:22.489 | INFO     | app.services.meta_knowledge_service:build:105 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 12:59:22.489 | INFO     | app.services.meta_knowledge_service:build:111 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=20，共 5 批
+2026-07-12 12:59:22.489 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 1/5, 共 20 条
+2026-07-12 12:59:22.771 | ERROR    | app.services.meta_knowledge_service:build:121 - [Embedding]   batch 1 向量化失败: 400, message='Bad Request', url='https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings'
+2026-07-12 13:01:58.173 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 13:01:58.173 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 13:01:58.174 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 13:01:58.174 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 13:01:58.283 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 13:01:58.283 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 13:01:58.451 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 13:01:58.451 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 13:01:58.452 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 13:01:58.452 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 13:01:58.452 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 13:01:58.452 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 13:01:58.500 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 13:01:58.500 | INFO     | app.services.meta_knowledge_service:build:38 - [Build] 开始处理 5 个表
+2026-07-12 13:01:58.500 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_region
+2026-07-12 13:01:58.516 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 13:01:58.518 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:01:58.519 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 13:01:58.520 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 13:01:58.521 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 13:01:58.521 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_customer
+2026-07-12 13:01:58.523 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 13:01:58.525 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:01:58.526 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 13:01:58.527 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 13:01:58.528 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 13:01:58.528 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_product
+2026-07-12 13:01:58.529 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 13:01:58.531 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:01:58.532 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 13:01:58.533 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 13:01:58.534 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 13:01:58.534 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_date
+2026-07-12 13:01:58.535 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 13:01:58.536 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 13:01:58.537 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 13:01:58.539 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 13:01:58.540 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 13:01:58.541 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 13:01:58.541 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: fact_order
+2026-07-12 13:01:58.542 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 13:01:58.543 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 13:01:58.544 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:01:58.545 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:01:58.546 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 13:01:58.548 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:01:58.549 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 13:01:58.550 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 13:01:58.550 | INFO     | app.services.meta_knowledge_service:build:75 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 13:01:58.563 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:17 - [MySQL] 旧数据已清空
+2026-07-12 13:01:58.574 | INFO     | app.services.meta_knowledge_service:build:81 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 13:01:58.574 | INFO     | app.services.meta_knowledge_service:build:83 - [Build] 准备创建 Qdrant collection...
+2026-07-12 13:01:58.586 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: True
+2026-07-12 13:01:58.586 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:26 - [Qdrant] collection 'column_info_collection' 已存在，跳过创建
+2026-07-12 13:01:58.587 | INFO     | app.services.meta_knowledge_service:build:85 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 13:01:58.587 | INFO     | app.services.meta_knowledge_service:build:105 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 13:01:58.587 | INFO     | app.services.meta_knowledge_service:build:111 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=20，共 5 批
+2026-07-12 13:01:58.587 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 1/5, 共 20 条
+2026-07-12 13:01:59.274 | ERROR    | app.services.meta_knowledge_service:build:121 - [Embedding]   batch 1 向量化失败: Embedding API 错误: status=400, body={"error":{"message":"<400> InternalError.Algo.InvalidParameter: Value error, batch size is invalid, it should not be larger than 10.: input.contents","type":"InvalidParameter","param":null,"code":"InvalidParameter"},"id":"6c34d69d-210f-9036-996e-90b6cabcfeef","request_id":"6c34d69d-210f-9036-996e-90b6cabcfeef"}
+2026-07-12 13:02:44.571 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 13:02:44.571 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 13:02:44.571 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 13:02:44.571 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 13:02:44.680 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 13:02:44.680 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 13:02:44.839 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 13:02:44.839 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 13:02:44.840 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 13:02:44.840 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 13:02:44.840 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 13:02:44.840 | INFO     | app.services.meta_knowledge_service:build:32 - [Build] 开始执行 build...
+2026-07-12 13:02:44.884 | INFO     | app.services.meta_knowledge_service:build:36 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 13:02:44.884 | INFO     | app.services.meta_knowledge_service:build:38 - [Build] 开始处理 5 个表
+2026-07-12 13:02:44.884 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_region
+2026-07-12 13:02:44.900 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 13:02:44.902 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:02:44.903 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 13:02:44.904 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 13:02:44.905 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 13:02:44.906 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_customer
+2026-07-12 13:02:44.907 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 13:02:44.909 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:02:44.910 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 13:02:44.911 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 13:02:44.912 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 13:02:44.912 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_product
+2026-07-12 13:02:44.913 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 13:02:44.914 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:02:44.916 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 13:02:44.917 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 13:02:44.918 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 13:02:44.918 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: dim_date
+2026-07-12 13:02:44.919 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 13:02:44.921 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 13:02:44.922 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 13:02:44.923 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 13:02:44.924 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 13:02:44.925 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 13:02:44.925 | INFO     | app.services.meta_knowledge_service:build:50 - [Build] 处理表: fact_order
+2026-07-12 13:02:44.927 | INFO     | app.services.meta_knowledge_service:build:60 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 13:02:44.928 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 13:02:44.929 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:02:44.930 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:02:44.931 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 13:02:44.932 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:02:44.933 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 13:02:44.935 | INFO     | app.services.meta_knowledge_service:build:74 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 13:02:44.935 | INFO     | app.services.meta_knowledge_service:build:75 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 13:02:44.947 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:17 - [MySQL] 旧数据已清空
+2026-07-12 13:02:44.958 | INFO     | app.services.meta_knowledge_service:build:81 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 13:02:44.958 | INFO     | app.services.meta_knowledge_service:build:83 - [Build] 准备创建 Qdrant collection...
+2026-07-12 13:02:44.970 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: True
+2026-07-12 13:02:44.970 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:26 - [Qdrant] collection 'column_info_collection' 已存在，跳过创建
+2026-07-12 13:02:44.970 | INFO     | app.services.meta_knowledge_service:build:85 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 13:02:44.970 | INFO     | app.services.meta_knowledge_service:build:105 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 13:02:44.970 | INFO     | app.services.meta_knowledge_service:build:111 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=10，共 10 批
+2026-07-12 13:02:44.970 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 1/10, 共 10 条
+2026-07-12 13:02:45.511 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 1 向量化完成，向量维度=1024
+2026-07-12 13:02:45.512 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 2/10, 共 10 条
+2026-07-12 13:02:45.826 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 2 向量化完成，向量维度=1024
+2026-07-12 13:02:45.826 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 3/10, 共 10 条
+2026-07-12 13:02:46.155 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 3 向量化完成，向量维度=1024
+2026-07-12 13:02:46.155 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 4/10, 共 10 条
+2026-07-12 13:02:46.456 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 4 向量化完成，向量维度=1024
+2026-07-12 13:02:46.456 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 5/10, 共 10 条
+2026-07-12 13:02:47.037 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 5 向量化完成，向量维度=1024
+2026-07-12 13:02:47.037 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 6/10, 共 10 条
+2026-07-12 13:02:47.353 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 6 向量化完成，向量维度=1024
+2026-07-12 13:02:47.353 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 7/10, 共 10 条
+2026-07-12 13:02:47.822 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 7 向量化完成，向量维度=1024
+2026-07-12 13:02:47.822 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 8/10, 共 10 条
+2026-07-12 13:02:48.352 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 8 向量化完成，向量维度=1024
+2026-07-12 13:02:48.352 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 9/10, 共 10 条
+2026-07-12 13:02:48.650 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 9 向量化完成，向量维度=1024
+2026-07-12 13:02:48.651 | INFO     | app.services.meta_knowledge_service:build:115 - [Embedding]   batch 10/10, 共 8 条
+2026-07-12 13:02:49.183 | INFO     | app.services.meta_knowledge_service:build:119 - [Embedding]   batch 10 向量化完成，向量维度=1024
+2026-07-12 13:02:49.183 | INFO     | app.services.meta_knowledge_service:build:123 - [Embedding] 全部向量化完成，共 98 条向量
+2026-07-12 13:02:49.183 | INFO     | app.services.meta_knowledge_service:build:127 - [Qdrant] 准备写入 98 条数据到 Qdrant...
+2026-07-12 13:03:32.459 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 13:03:32.460 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 13:03:32.460 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 13:03:32.460 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 13:03:32.569 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 13:03:32.570 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 13:03:32.728 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 13:03:32.729 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 13:03:32.729 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 13:03:32.729 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 13:03:32.729 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 13:03:32.730 | INFO     | app.services.meta_knowledge_service:build:33 - [Build] 开始执行 build...
+2026-07-12 13:03:32.773 | INFO     | app.services.meta_knowledge_service:build:37 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 13:03:32.773 | INFO     | app.services.meta_knowledge_service:build:39 - [Build] 开始处理 5 个表
+2026-07-12 13:03:32.774 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_region
+2026-07-12 13:03:32.790 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 13:03:32.791 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:03:32.792 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 13:03:32.793 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 13:03:32.794 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 13:03:32.794 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_customer
+2026-07-12 13:03:32.796 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 13:03:32.798 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:03:32.799 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 13:03:32.800 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 13:03:32.801 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 13:03:32.801 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_product
+2026-07-12 13:03:32.802 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 13:03:32.803 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:03:32.805 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 13:03:32.806 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 13:03:32.807 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 13:03:32.807 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_date
+2026-07-12 13:03:32.808 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 13:03:32.809 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 13:03:32.810 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 13:03:32.811 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 13:03:32.818 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 13:03:32.819 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 13:03:32.819 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: fact_order
+2026-07-12 13:03:32.820 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 13:03:32.821 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 13:03:32.822 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:03:32.823 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:03:32.825 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 13:03:32.826 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:03:32.827 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 13:03:32.828 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 13:03:32.828 | INFO     | app.services.meta_knowledge_service:build:76 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 13:03:32.840 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:17 - [MySQL] 旧数据已清空
+2026-07-12 13:03:32.851 | INFO     | app.services.meta_knowledge_service:build:82 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 13:03:32.851 | INFO     | app.services.meta_knowledge_service:build:84 - [Build] 准备创建 Qdrant collection...
+2026-07-12 13:03:32.863 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: True
+2026-07-12 13:03:32.863 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:26 - [Qdrant] collection 'column_info_collection' 已存在，跳过创建
+2026-07-12 13:03:32.863 | INFO     | app.services.meta_knowledge_service:build:86 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 13:03:32.864 | INFO     | app.services.meta_knowledge_service:build:106 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 13:03:32.864 | INFO     | app.services.meta_knowledge_service:build:112 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=10，共 10 批
+2026-07-12 13:03:32.864 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 1/10, 共 10 条
+2026-07-12 13:03:33.210 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 1 向量化完成，向量维度=1024
+2026-07-12 13:03:33.210 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 2/10, 共 10 条
+2026-07-12 13:03:33.522 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 2 向量化完成，向量维度=1024
+2026-07-12 13:03:33.522 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 3/10, 共 10 条
+2026-07-12 13:03:33.844 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 3 向量化完成，向量维度=1024
+2026-07-12 13:03:33.844 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 4/10, 共 10 条
+2026-07-12 13:03:34.454 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 4 向量化完成，向量维度=1024
+2026-07-12 13:03:34.454 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 5/10, 共 10 条
+2026-07-12 13:03:34.751 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 5 向量化完成，向量维度=1024
+2026-07-12 13:03:34.751 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 6/10, 共 10 条
+2026-07-12 13:03:35.246 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 6 向量化完成，向量维度=1024
+2026-07-12 13:03:35.246 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 7/10, 共 10 条
+2026-07-12 13:03:35.830 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 7 向量化完成，向量维度=1024
+2026-07-12 13:03:35.830 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 8/10, 共 10 条
+2026-07-12 13:03:36.404 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 8 向量化完成，向量维度=1024
+2026-07-12 13:03:36.404 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 9/10, 共 10 条
+2026-07-12 13:03:36.853 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 9 向量化完成，向量维度=1024
+2026-07-12 13:03:36.853 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 10/10, 共 8 条
+2026-07-12 13:03:37.092 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 10 向量化完成，向量维度=1024
+2026-07-12 13:03:37.092 | INFO     | app.services.meta_knowledge_service:build:124 - [Embedding] 全部向量化完成，共 98 条向量
+2026-07-12 13:03:37.093 | INFO     | app.services.meta_knowledge_service:build:128 - [Qdrant] 准备写入 98 条数据到 Qdrant...
+2026-07-12 13:03:37.094 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:30 - [Qdrant] 开始写入 98 条向量数据，batch_size=10
+2026-07-12 13:03:37.094 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 1 批，共 10 条
+2026-07-12 13:03:37.122 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 2 批，共 10 条
+2026-07-12 13:03:37.139 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 3 批，共 10 条
+2026-07-12 13:03:37.156 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 4 批，共 10 条
+2026-07-12 13:03:37.179 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 5 批，共 10 条
+2026-07-12 13:03:37.198 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 6 批，共 10 条
+2026-07-12 13:03:37.216 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 7 批，共 10 条
+2026-07-12 13:03:37.236 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 8 批，共 10 条
+2026-07-12 13:03:37.255 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 9 批，共 10 条
+2026-07-12 13:03:37.273 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 10 批，共 8 条
+2026-07-12 13:03:37.288 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:38 - [Qdrant] 向量数据写入完成
+2026-07-12 13:03:37.289 | INFO     | app.services.meta_knowledge_service:build:130 - [Qdrant] 向量数据写入完成
+2026-07-12 13:03:37.289 | INFO     | app.services.meta_knowledge_service:build:133 - [ES] 开始处理全文索引...
+2026-07-12 13:03:37.452 | INFO     | app.services.meta_knowledge_service:build:146 - [ES] 共 75 条值索引数据，开始写入 ES
+2026-07-12 13:04:06.430 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 13:04:06.430 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 13:04:06.430 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 13:04:06.430 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 13:04:06.540 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 13:04:06.540 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 13:04:06.701 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 13:04:06.701 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 13:04:06.702 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 13:04:06.702 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 13:04:06.702 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 13:04:06.702 | INFO     | app.services.meta_knowledge_service:build:33 - [Build] 开始执行 build...
+2026-07-12 13:04:06.746 | INFO     | app.services.meta_knowledge_service:build:37 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 13:04:06.746 | INFO     | app.services.meta_knowledge_service:build:39 - [Build] 开始处理 5 个表
+2026-07-12 13:04:06.746 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_region
+2026-07-12 13:04:06.763 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 13:04:06.764 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:04:06.765 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 13:04:06.766 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 13:04:06.767 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 13:04:06.767 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_customer
+2026-07-12 13:04:06.769 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 13:04:06.771 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:04:06.772 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 13:04:06.773 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 13:04:06.774 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 13:04:06.774 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_product
+2026-07-12 13:04:06.776 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 13:04:06.777 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:04:06.778 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 13:04:06.779 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 13:04:06.780 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 13:04:06.780 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_date
+2026-07-12 13:04:06.782 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 13:04:06.783 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 13:04:06.784 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 13:04:06.785 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 13:04:06.786 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 13:04:06.787 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 13:04:06.787 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: fact_order
+2026-07-12 13:04:06.788 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 13:04:06.790 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 13:04:06.791 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:04:06.792 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:04:06.793 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 13:04:06.794 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:04:06.795 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 13:04:06.796 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 13:04:06.796 | INFO     | app.services.meta_knowledge_service:build:76 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 13:04:06.809 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:17 - [MySQL] 旧数据已清空
+2026-07-12 13:04:06.820 | INFO     | app.services.meta_knowledge_service:build:82 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 13:04:06.820 | INFO     | app.services.meta_knowledge_service:build:84 - [Build] 准备创建 Qdrant collection...
+2026-07-12 13:04:06.833 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: True
+2026-07-12 13:04:06.833 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:26 - [Qdrant] collection 'column_info_collection' 已存在，跳过创建
+2026-07-12 13:04:06.833 | INFO     | app.services.meta_knowledge_service:build:86 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 13:04:06.834 | INFO     | app.services.meta_knowledge_service:build:106 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 13:04:06.834 | INFO     | app.services.meta_knowledge_service:build:112 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=10，共 10 批
+2026-07-12 13:04:06.834 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 1/10, 共 10 条
+2026-07-12 13:04:07.392 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 1 向量化完成，向量维度=1024
+2026-07-12 13:04:07.392 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 2/10, 共 10 条
+2026-07-12 13:04:07.917 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 2 向量化完成，向量维度=1024
+2026-07-12 13:04:07.917 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 3/10, 共 10 条
+2026-07-12 13:04:08.447 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 3 向量化完成，向量维度=1024
+2026-07-12 13:04:08.447 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 4/10, 共 10 条
+2026-07-12 13:04:08.726 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 4 向量化完成，向量维度=1024
+2026-07-12 13:04:08.726 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 5/10, 共 10 条
+2026-07-12 13:04:09.230 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 5 向量化完成，向量维度=1024
+2026-07-12 13:04:09.230 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 6/10, 共 10 条
+2026-07-12 13:04:09.548 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 6 向量化完成，向量维度=1024
+2026-07-12 13:04:09.548 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 7/10, 共 10 条
+2026-07-12 13:04:10.133 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 7 向量化完成，向量维度=1024
+2026-07-12 13:04:10.133 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 8/10, 共 10 条
+2026-07-12 13:04:11.036 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 8 向量化完成，向量维度=1024
+2026-07-12 13:04:11.036 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 9/10, 共 10 条
+2026-07-12 13:04:11.397 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 9 向量化完成，向量维度=1024
+2026-07-12 13:04:11.397 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 10/10, 共 8 条
+2026-07-12 13:04:11.913 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 10 向量化完成，向量维度=1024
+2026-07-12 13:04:11.913 | INFO     | app.services.meta_knowledge_service:build:124 - [Embedding] 全部向量化完成，共 98 条向量
+2026-07-12 13:04:11.913 | INFO     | app.services.meta_knowledge_service:build:128 - [Qdrant] 准备写入 98 条数据到 Qdrant...
+2026-07-12 13:04:11.915 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:30 - [Qdrant] 开始写入 98 条向量数据，batch_size=10
+2026-07-12 13:04:11.915 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 1 批，共 10 条
+2026-07-12 13:04:11.939 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 2 批，共 10 条
+2026-07-12 13:04:11.957 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 3 批，共 10 条
+2026-07-12 13:04:11.974 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 4 批，共 10 条
+2026-07-12 13:04:11.996 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 5 批，共 10 条
+2026-07-12 13:04:12.017 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 6 批，共 10 条
+2026-07-12 13:04:12.037 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 7 批，共 10 条
+2026-07-12 13:04:12.056 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 8 批，共 10 条
+2026-07-12 13:04:12.078 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 9 批，共 10 条
+2026-07-12 13:04:12.095 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 10 批，共 8 条
+2026-07-12 13:04:12.111 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:38 - [Qdrant] 向量数据写入完成
+2026-07-12 13:04:12.111 | INFO     | app.services.meta_knowledge_service:build:130 - [Qdrant] 向量数据写入完成
+2026-07-12 13:04:12.111 | INFO     | app.services.meta_knowledge_service:build:133 - [ES] 开始处理全文索引...
+2026-07-12 13:04:12.127 | INFO     | app.services.meta_knowledge_service:build:146 - [ES] 共 75 条值索引数据，开始写入 ES
+2026-07-12 13:04:12.186 | INFO     | app.services.meta_knowledge_service:build:148 - [ES] ES 索引写入完成
+2026-07-12 13:04:12.186 | INFO     | app.services.meta_knowledge_service:build:152 - [Build] 检测到 metrics 配置，暂未处理
+2026-07-12 13:04:12.187 | INFO     | __main__:build:43 - [完成] 知识库构建完成！
+2026-07-12 13:04:12.191 | INFO     | __main__:build:48 - [清理] 所有连接已关闭
+2026-07-12 13:06:36.880 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 13:06:36.881 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 13:06:36.881 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 13:06:36.881 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 13:06:37.027 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 13:06:37.027 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 13:06:37.210 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 13:06:37.211 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 13:06:37.211 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 13:06:37.211 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 13:06:37.211 | INFO     | __main__:build:39 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 13:06:37.212 | INFO     | app.services.meta_knowledge_service:build:33 - [Build] 开始执行 build...
+2026-07-12 13:06:37.256 | INFO     | app.services.meta_knowledge_service:build:37 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 13:06:37.256 | INFO     | app.services.meta_knowledge_service:build:39 - [Build] 开始处理 5 个表
+2026-07-12 13:06:37.257 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_region
+2026-07-12 13:06:37.276 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 13:06:37.277 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:06:37.278 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 13:06:37.279 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 13:06:37.280 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 13:06:37.280 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_customer
+2026-07-12 13:06:37.282 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 13:06:37.284 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:06:37.285 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 13:06:37.286 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 13:06:37.287 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 13:06:37.288 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_product
+2026-07-12 13:06:37.289 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 13:06:37.290 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:06:37.291 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 13:06:37.292 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 13:06:37.293 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 13:06:37.294 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: dim_date
+2026-07-12 13:06:37.295 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 13:06:37.296 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 13:06:37.297 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 13:06:37.298 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 13:06:37.299 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 13:06:37.301 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 13:06:37.301 | INFO     | app.services.meta_knowledge_service:build:51 - [Build] 处理表: fact_order
+2026-07-12 13:06:37.302 | INFO     | app.services.meta_knowledge_service:build:61 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 13:06:37.303 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 13:06:37.304 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 13:06:37.305 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 13:06:37.306 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 13:06:37.307 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 13:06:37.309 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 13:06:37.310 | INFO     | app.services.meta_knowledge_service:build:75 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 13:06:37.310 | INFO     | app.services.meta_knowledge_service:build:76 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 13:06:37.323 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:17 - [MySQL] 旧数据已清空
+2026-07-12 13:06:37.335 | INFO     | app.services.meta_knowledge_service:build:82 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 13:06:37.335 | INFO     | app.services.meta_knowledge_service:build:84 - [Build] 准备创建 Qdrant collection...
+2026-07-12 13:06:37.348 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:14 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: False
+2026-07-12 13:06:37.348 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:16 - [Qdrant] collection 'column_info_collection' 不存在，正在创建...
+2026-07-12 13:06:37.427 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:24 - [Qdrant] collection 'column_info_collection' 创建成功
+2026-07-12 13:06:37.428 | INFO     | app.services.meta_knowledge_service:build:86 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 13:06:37.428 | INFO     | app.services.meta_knowledge_service:build:106 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 13:06:37.428 | INFO     | app.services.meta_knowledge_service:build:112 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=10，共 10 批
+2026-07-12 13:06:37.428 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 1/10, 共 10 条
+2026-07-12 13:06:38.024 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 1 向量化完成，向量维度=1024
+2026-07-12 13:06:38.025 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 2/10, 共 10 条
+2026-07-12 13:06:38.318 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 2 向量化完成，向量维度=1024
+2026-07-12 13:06:38.318 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 3/10, 共 10 条
+2026-07-12 13:06:38.666 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 3 向量化完成，向量维度=1024
+2026-07-12 13:06:38.666 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 4/10, 共 10 条
+2026-07-12 13:06:38.966 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 4 向量化完成，向量维度=1024
+2026-07-12 13:06:38.966 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 5/10, 共 10 条
+2026-07-12 13:06:39.470 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 5 向量化完成，向量维度=1024
+2026-07-12 13:06:39.470 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 6/10, 共 10 条
+2026-07-12 13:06:39.769 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 6 向量化完成，向量维度=1024
+2026-07-12 13:06:39.770 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 7/10, 共 10 条
+2026-07-12 13:06:40.073 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 7 向量化完成，向量维度=1024
+2026-07-12 13:06:40.073 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 8/10, 共 10 条
+2026-07-12 13:06:40.389 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 8 向量化完成，向量维度=1024
+2026-07-12 13:06:40.389 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 9/10, 共 10 条
+2026-07-12 13:06:40.728 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 9 向量化完成，向量维度=1024
+2026-07-12 13:06:40.728 | INFO     | app.services.meta_knowledge_service:build:116 - [Embedding]   batch 10/10, 共 8 条
+2026-07-12 13:06:41.012 | INFO     | app.services.meta_knowledge_service:build:120 - [Embedding]   batch 10 向量化完成，向量维度=1024
+2026-07-12 13:06:41.013 | INFO     | app.services.meta_knowledge_service:build:124 - [Embedding] 全部向量化完成，共 98 条向量
+2026-07-12 13:06:41.013 | INFO     | app.services.meta_knowledge_service:build:128 - [Qdrant] 准备写入 98 条数据到 Qdrant...
+2026-07-12 13:06:41.015 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:30 - [Qdrant] 开始写入 98 条向量数据，batch_size=10
+2026-07-12 13:06:41.015 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 1 批，共 10 条
+2026-07-12 13:06:41.033 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 2 批，共 10 条
+2026-07-12 13:06:41.050 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 3 批，共 10 条
+2026-07-12 13:06:41.070 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 4 批，共 10 条
+2026-07-12 13:06:41.086 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 5 批，共 10 条
+2026-07-12 13:06:41.102 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 6 批，共 10 条
+2026-07-12 13:06:41.127 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 7 批，共 10 条
+2026-07-12 13:06:41.147 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 8 批，共 10 条
+2026-07-12 13:06:41.163 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 9 批，共 10 条
+2026-07-12 13:06:41.179 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:33 - [Qdrant] 写入第 10 批，共 8 条
+2026-07-12 13:06:41.194 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:38 - [Qdrant] 向量数据写入完成
+2026-07-12 13:06:41.194 | INFO     | app.services.meta_knowledge_service:build:130 - [Qdrant] 向量数据写入完成
+2026-07-12 13:06:41.194 | INFO     | app.services.meta_knowledge_service:build:133 - [ES] 开始处理全文索引...
+2026-07-12 13:06:41.210 | INFO     | app.services.meta_knowledge_service:build:146 - [ES] 共 75 条值索引数据，开始写入 ES
+2026-07-12 13:06:41.254 | INFO     | app.services.meta_knowledge_service:build:148 - [ES] ES 索引写入完成
+2026-07-12 13:06:41.254 | INFO     | app.services.meta_knowledge_service:build:152 - [Build] 检测到 metrics 配置，暂未处理
+2026-07-12 13:06:41.255 | INFO     | __main__:build:43 - [完成] 知识库构建完成！
+2026-07-12 13:06:41.259 | INFO     | __main__:build:48 - [清理] 所有连接已关闭
+2026-07-12 23:12:26.158 | INFO     | __main__:build:17 - ==================================================
+2026-07-12 23:12:26.158 | INFO     | __main__:build:18 - 开始构建知识库...
+2026-07-12 23:12:26.159 | INFO     | __main__:build:19 - ==================================================
+2026-07-12 23:12:26.159 | INFO     | __main__:build:20 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 23:12:26.315 | INFO     | __main__:build:23 - [MySQL] meta 连接已初始化
+2026-07-12 23:12:26.315 | INFO     | __main__:build:24 - [MySQL] dw 连接已初始化
+2026-07-12 23:12:26.528 | INFO     | __main__:build:26 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 23:12:26.528 | INFO     | __main__:build:28 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 23:12:26.529 | INFO     | __main__:build:30 - [ES] 连接已初始化
+2026-07-12 23:12:26.530 | INFO     | __main__:build:33 - [MySQL] 数据库会话已创建
+2026-07-12 23:13:59.382 | INFO     | __main__:build:18 - ==================================================
+2026-07-12 23:13:59.382 | INFO     | __main__:build:19 - 开始构建知识库...
+2026-07-12 23:13:59.382 | INFO     | __main__:build:20 - ==================================================
+2026-07-12 23:13:59.382 | INFO     | __main__:build:21 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 23:13:59.495 | INFO     | __main__:build:24 - [MySQL] meta 连接已初始化
+2026-07-12 23:13:59.496 | INFO     | __main__:build:25 - [MySQL] dw 连接已初始化
+2026-07-12 23:13:59.659 | INFO     | __main__:build:27 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 23:13:59.660 | INFO     | __main__:build:29 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 23:13:59.660 | INFO     | __main__:build:31 - [ES] 连接已初始化
+2026-07-12 23:13:59.660 | INFO     | __main__:build:34 - [MySQL] 数据库会话已创建
+2026-07-12 23:13:59.661 | INFO     | __main__:build:41 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 23:13:59.661 | INFO     | app.services.meta_knowledge_service:build:221 - [Build] 开始执行 build...
+2026-07-12 23:13:59.706 | INFO     | app.services.meta_knowledge_service:build:225 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 23:13:59.706 | INFO     | app.services.meta_knowledge_service:build:227 - [Build] 开始处理 5 个表
+2026-07-12 23:13:59.706 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:76 - [Build] 准备创建 column Qdrant collection...
+2026-07-12 23:13:59.741 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:15 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: False
+2026-07-12 23:13:59.742 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:17 - [Qdrant] collection 'column_info_collection' 不存在，正在创建...
+2026-07-12 23:13:59.847 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:25 - [Qdrant] collection 'column_info_collection' 创建成功
+2026-07-12 23:13:59.847 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:78 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 23:15:55.249 | INFO     | __main__:build:18 - ==================================================
+2026-07-12 23:15:55.249 | INFO     | __main__:build:19 - 开始构建知识库...
+2026-07-12 23:15:55.249 | INFO     | __main__:build:20 - ==================================================
+2026-07-12 23:15:55.249 | INFO     | __main__:build:21 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 23:15:55.398 | INFO     | __main__:build:24 - [MySQL] meta 连接已初始化
+2026-07-12 23:15:55.398 | INFO     | __main__:build:25 - [MySQL] dw 连接已初始化
+2026-07-12 23:15:55.578 | INFO     | __main__:build:27 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 23:15:55.578 | INFO     | __main__:build:29 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 23:15:55.579 | INFO     | __main__:build:31 - [ES] 连接已初始化
+2026-07-12 23:15:55.579 | INFO     | __main__:build:34 - [MySQL] 数据库会话已创建
+2026-07-12 23:15:55.579 | INFO     | __main__:build:41 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 23:15:55.579 | INFO     | app.services.meta_knowledge_service:build:221 - [Build] 开始执行 build...
+2026-07-12 23:15:55.624 | INFO     | app.services.meta_knowledge_service:build:225 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 23:15:55.624 | INFO     | app.services.meta_knowledge_service:build:227 - [Build] 开始处理 5 个表
+2026-07-12 23:15:55.625 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_region
+2026-07-12 23:15:55.704 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 23:15:55.717 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 23:15:55.719 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 23:15:55.720 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 23:15:55.721 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 23:15:55.721 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_customer
+2026-07-12 23:15:55.723 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 23:15:55.726 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 23:15:55.727 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 23:15:55.728 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 23:15:55.729 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 23:15:55.729 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_product
+2026-07-12 23:15:55.731 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 23:15:55.733 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 23:15:55.734 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 23:15:55.735 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 23:15:55.736 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 23:15:55.736 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_date
+2026-07-12 23:15:55.738 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 23:15:55.740 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 23:15:55.741 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 23:15:55.742 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 23:15:55.743 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 23:15:55.744 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 23:15:55.744 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: fact_order
+2026-07-12 23:15:55.746 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 23:15:55.748 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 23:15:55.749 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 23:15:55.750 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 23:15:55.751 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 23:15:55.752 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 23:15:55.753 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 23:15:55.755 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 23:15:55.755 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:66 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 23:15:55.771 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:21 - [MySQL] 旧数据已清空
+2026-07-12 23:15:55.785 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:71 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 23:15:55.785 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:76 - [Build] 准备创建 column Qdrant collection...
+2026-07-12 23:15:55.799 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:15 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: True
+2026-07-12 23:15:55.799 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:27 - [Qdrant] collection 'column_info_collection' 已存在，跳过创建
+2026-07-12 23:15:55.799 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:78 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 23:15:55.800 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:99 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 23:15:55.800 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:105 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=10，共 10 批
+2026-07-12 23:15:55.800 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 1/10, 共 10 条
+2026-07-12 23:15:56.482 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 1 向量化完成，向量维度=1024
+2026-07-12 23:15:56.483 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 2/10, 共 10 条
+2026-07-12 23:15:56.880 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 2 向量化完成，向量维度=1024
+2026-07-12 23:15:56.880 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 3/10, 共 10 条
+2026-07-12 23:15:57.239 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 3 向量化完成，向量维度=1024
+2026-07-12 23:15:57.239 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 4/10, 共 10 条
+2026-07-12 23:15:57.537 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 4 向量化完成，向量维度=1024
+2026-07-12 23:15:57.537 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 5/10, 共 10 条
+2026-07-12 23:15:57.874 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 5 向量化完成，向量维度=1024
+2026-07-12 23:15:57.874 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 6/10, 共 10 条
+2026-07-12 23:15:58.386 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 6 向量化完成，向量维度=1024
+2026-07-12 23:15:58.386 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 7/10, 共 10 条
+2026-07-12 23:15:58.967 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 7 向量化完成，向量维度=1024
+2026-07-12 23:15:58.967 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 8/10, 共 10 条
+2026-07-12 23:15:59.327 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 8 向量化完成，向量维度=1024
+2026-07-12 23:15:59.327 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 9/10, 共 10 条
+2026-07-12 23:15:59.827 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 9 向量化完成，向量维度=1024
+2026-07-12 23:15:59.827 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 10/10, 共 8 条
+2026-07-12 23:16:00.101 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 10 向量化完成，向量维度=1024
+2026-07-12 23:16:00.101 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:119 - [Embedding] 全部向量化完成，共 98 条向量
+2026-07-12 23:16:00.101 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:123 - [Qdrant] 准备写入 98 条数据到 Qdrant...
+2026-07-12 23:16:00.104 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:31 - [Qdrant] 开始写入 98 条向量数据，batch_size=10
+2026-07-12 23:16:00.104 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 1 批，共 10 条
+2026-07-12 23:16:00.145 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 2 批，共 10 条
+2026-07-12 23:16:00.168 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 3 批，共 10 条
+2026-07-12 23:16:00.193 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 4 批，共 10 条
+2026-07-12 23:16:00.214 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 5 批，共 10 条
+2026-07-12 23:16:00.236 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 6 批，共 10 条
+2026-07-12 23:16:00.258 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 7 批，共 10 条
+2026-07-12 23:16:00.281 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 8 批，共 10 条
+2026-07-12 23:16:00.305 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 9 批，共 10 条
+2026-07-12 23:16:00.331 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 10 批，共 8 条
+2026-07-12 23:16:00.352 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:39 - [Qdrant] 向量数据写入完成
+2026-07-12 23:16:00.353 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:125 - [Qdrant] 向量数据写入完成
+2026-07-12 23:16:00.354 | INFO     | app.services.meta_knowledge_service:_save_value_to_es:128 - [ES] 开始处理全文索引...
+2026-07-12 23:16:00.569 | INFO     | app.services.meta_knowledge_service:_save_value_to_es:141 - [ES] 共 75 条值索引数据，开始写入 ES
+2026-07-12 23:16:00.620 | INFO     | app.services.meta_knowledge_service:_save_value_to_es:143 - [ES] ES 索引写入完成
+2026-07-12 23:17:28.158 | INFO     | __main__:build:18 - ==================================================
+2026-07-12 23:17:28.159 | INFO     | __main__:build:19 - 开始构建知识库...
+2026-07-12 23:17:28.159 | INFO     | __main__:build:20 - ==================================================
+2026-07-12 23:17:28.159 | INFO     | __main__:build:21 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 23:17:28.310 | INFO     | __main__:build:24 - [MySQL] meta 连接已初始化
+2026-07-12 23:17:28.310 | INFO     | __main__:build:25 - [MySQL] dw 连接已初始化
+2026-07-12 23:17:28.495 | INFO     | __main__:build:27 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 23:17:28.495 | INFO     | __main__:build:29 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 23:17:28.495 | INFO     | __main__:build:31 - [ES] 连接已初始化
+2026-07-12 23:17:28.496 | INFO     | __main__:build:34 - [MySQL] 数据库会话已创建
+2026-07-12 23:17:28.496 | INFO     | __main__:build:41 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 23:17:28.496 | INFO     | app.services.meta_knowledge_service:build:221 - [Build] 开始执行 build...
+2026-07-12 23:17:28.541 | INFO     | app.services.meta_knowledge_service:build:225 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 23:17:28.542 | INFO     | app.services.meta_knowledge_service:build:227 - [Build] 开始处理 5 个表
+2026-07-12 23:17:28.542 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_region
+2026-07-12 23:17:53.303 | INFO     | __main__:build:18 - ==================================================
+2026-07-12 23:17:53.304 | INFO     | __main__:build:19 - 开始构建知识库...
+2026-07-12 23:17:53.304 | INFO     | __main__:build:20 - ==================================================
+2026-07-12 23:17:53.304 | INFO     | __main__:build:21 - [配置] 加载配置: D:\PycharmProjects\data-agent\conf\meta_config.yaml
+2026-07-12 23:17:53.433 | INFO     | __main__:build:24 - [MySQL] meta 连接已初始化
+2026-07-12 23:17:53.433 | INFO     | __main__:build:25 - [MySQL] dw 连接已初始化
+2026-07-12 23:17:53.605 | INFO     | __main__:build:27 - [Qdrant] 连接已初始化: http://localhost:6333
+2026-07-12 23:17:53.605 | INFO     | __main__:build:29 - [Embedding] 客户端已初始化: model=text-embedding-v3
+2026-07-12 23:17:53.606 | INFO     | __main__:build:31 - [ES] 连接已初始化
+2026-07-12 23:17:53.606 | INFO     | __main__:build:34 - [MySQL] 数据库会话已创建
+2026-07-12 23:17:53.606 | INFO     | __main__:build:41 - [Service] MetaKnowledgeService 已初始化，开始执行 build...
+2026-07-12 23:17:53.607 | INFO     | app.services.meta_knowledge_service:build:221 - [Build] 开始执行 build...
+2026-07-12 23:17:53.651 | INFO     | app.services.meta_knowledge_service:build:225 - [Build] meta_config 加载完成: tables=5, metrics=2
+2026-07-12 23:17:53.651 | INFO     | app.services.meta_knowledge_service:build:227 - [Build] 开始处理 5 个表
+2026-07-12 23:17:53.651 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_region
+2026-07-12 23:17:53.713 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_region 的字段类型: {'region_id': 'varchar(20)', 'province': 'varchar(50)', 'region_name': 'varchar(50)', 'country': 'varchar(50)'}
+2026-07-12 23:17:53.736 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 23:17:53.738 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.province, 类型: varchar(50), 别名: ['省份', '省', '所在省份']
+2026-07-12 23:17:53.739 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.region_name, 类型: varchar(50), 别名: ['地区', '区域', '大区']
+2026-07-12 23:17:53.741 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_region.country, 类型: varchar(50), 别名: ['国家', '国家名称']
+2026-07-12 23:17:53.741 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_customer
+2026-07-12 23:17:53.744 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_customer 的字段类型: {'customer_id': 'varchar(20)', 'customer_name': 'varchar(50)', 'gender': 'varchar(10)', 'member_level': 'varchar(20)'}
+2026-07-12 23:17:53.745 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 23:17:53.746 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.customer_name, 类型: varchar(50), 别名: ['客户名称', '用户名称']
+2026-07-12 23:17:53.747 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.gender, 类型: varchar(10), 别名: ['性别']
+2026-07-12 23:17:53.749 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_customer.member_level, 类型: varchar(20), 别名: ['会员等级', '用户等级']
+2026-07-12 23:17:53.749 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_product
+2026-07-12 23:17:53.752 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_product 的字段类型: {'product_id': 'varchar(20)', 'product_name': 'varchar(200)', 'category': 'varchar(50)', 'brand': 'varchar(50)'}
+2026-07-12 23:17:53.754 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 23:17:53.755 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.product_name, 类型: varchar(200), 别名: ['商品名称', '产品名称']
+2026-07-12 23:17:53.756 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.category, 类型: varchar(50), 别名: ['商品类别', '品类', '分类']
+2026-07-12 23:17:53.758 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_product.brand, 类型: varchar(50), 别名: ['品牌', '品牌名称']
+2026-07-12 23:17:53.758 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: dim_date
+2026-07-12 23:17:53.760 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   dim_date 的字段类型: {'date_id': 'int', 'year': 'int', 'quarter': 'varchar(2)', 'month': 'int', 'day': 'int'}
+2026-07-12 23:17:53.761 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.date_id, 类型: int, 别名: ['日期ID', '日期']
+2026-07-12 23:17:53.762 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.year, 类型: int, 别名: ['年', '年份']
+2026-07-12 23:17:53.763 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.quarter, 类型: varchar(2), 别名: ['季度']
+2026-07-12 23:17:53.765 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.month, 类型: int, 别名: ['月', '月份']
+2026-07-12 23:17:53.766 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: dim_date.day, 类型: int, 别名: ['日', '天']
+2026-07-12 23:17:53.766 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:41 - [Build] 处理表: fact_order
+2026-07-12 23:17:53.767 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:51 - [Build]   fact_order 的字段类型: {'order_id': 'varchar(30)', 'customer_id': 'varchar(20)', 'product_id': 'varchar(20)', 'date_id': 'int', 'region_id': 'varchar(20)', 'order_quantity': 'int', 'order_amount': 'float'}
+2026-07-12 23:17:53.769 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.order_id, 类型: varchar(30), 别名: ['订单ID']
+2026-07-12 23:17:53.770 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.customer_id, 类型: varchar(20), 别名: ['客户ID', '用户ID']
+2026-07-12 23:17:53.771 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.product_id, 类型: varchar(20), 别名: ['商品ID', '产品ID']
+2026-07-12 23:17:53.772 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.date_id, 类型: int, 别名: ['日期', '下单日期']
+2026-07-12 23:17:53.774 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.region_id, 类型: varchar(20), 别名: ['地区ID', '区域ID']
+2026-07-12 23:17:53.775 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.order_quantity, 类型: int, 别名: ['销量', '购买数量', '件数']
+2026-07-12 23:17:53.776 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:65 - [Build]   -> 字段: fact_order.order_amount, 类型: float, 别名: ['销售额', '订单金额', '收入']
+2026-07-12 23:17:53.776 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:66 - [Build] 表信息和字段信息收集完成: 5 个表, 24 个字段
+2026-07-12 23:17:53.798 | INFO     | app.repositories.mysql.meta.meta_mysql_repository:clear_all:21 - [MySQL] 旧数据已清空
+2026-07-12 23:17:53.812 | INFO     | app.services.meta_knowledge_service:_save_tables_to_meta_db:71 - [Build] MySQL 表/字段信息保存完成
+2026-07-12 23:17:53.812 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:76 - [Build] 准备创建 column Qdrant collection...
+2026-07-12 23:17:53.830 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:15 - [Qdrant] 检查 collection 'column_info_collection' 是否存在: False
+2026-07-12 23:17:53.830 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:17 - [Qdrant] collection 'column_info_collection' 不存在，正在创建...
+2026-07-12 23:17:53.945 | INFO     | app.repositories.qdrant.column_qdrant_repository:ensure_collection:25 - [Qdrant] collection 'column_info_collection' 创建成功
+2026-07-12 23:17:53.945 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:78 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 23:17:53.946 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:99 - [Embedding] 共生成 98 条待向量化的文本
+2026-07-12 23:17:53.946 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:105 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=10，共 10 批
+2026-07-12 23:17:53.946 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 1/10, 共 10 条
+2026-07-12 23:17:54.368 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 1 向量化完成，向量维度=1024
+2026-07-12 23:17:54.368 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 2/10, 共 10 条
+2026-07-12 23:17:55.071 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 2 向量化完成，向量维度=1024
+2026-07-12 23:17:55.071 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 3/10, 共 10 条
+2026-07-12 23:17:55.452 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 3 向量化完成，向量维度=1024
+2026-07-12 23:17:55.453 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 4/10, 共 10 条
+2026-07-12 23:17:55.903 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 4 向量化完成，向量维度=1024
+2026-07-12 23:17:55.903 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 5/10, 共 10 条
+2026-07-12 23:17:56.678 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 5 向量化完成，向量维度=1024
+2026-07-12 23:17:56.679 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 6/10, 共 10 条
+2026-07-12 23:17:57.135 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 6 向量化完成，向量维度=1024
+2026-07-12 23:17:57.135 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 7/10, 共 10 条
+2026-07-12 23:17:57.566 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 7 向量化完成，向量维度=1024
+2026-07-12 23:17:57.566 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 8/10, 共 10 条
+2026-07-12 23:17:58.225 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 8 向量化完成，向量维度=1024
+2026-07-12 23:17:58.226 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 9/10, 共 10 条
+2026-07-12 23:17:58.697 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 9 向量化完成，向量维度=1024
+2026-07-12 23:17:58.697 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:110 - [Embedding]   batch 10/10, 共 8 条
+2026-07-12 23:17:59.295 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:114 - [Embedding]   batch 10 向量化完成，向量维度=1024
+2026-07-12 23:17:59.296 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:119 - [Embedding] 全部向量化完成，共 98 条向量
+2026-07-12 23:17:59.296 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:123 - [Qdrant] 准备写入 98 条数据到 Qdrant...
+2026-07-12 23:17:59.298 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:31 - [Qdrant] 开始写入 98 条向量数据，batch_size=10
+2026-07-12 23:17:59.298 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 1 批，共 10 条
+2026-07-12 23:17:59.338 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 2 批，共 10 条
+2026-07-12 23:17:59.361 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 3 批，共 10 条
+2026-07-12 23:17:59.381 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 4 批，共 10 条
+2026-07-12 23:17:59.397 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 5 批，共 10 条
+2026-07-12 23:17:59.423 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 6 批，共 10 条
+2026-07-12 23:17:59.456 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 7 批，共 10 条
+2026-07-12 23:17:59.478 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 8 批，共 10 条
+2026-07-12 23:17:59.496 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 9 批，共 10 条
+2026-07-12 23:17:59.525 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:34 - [Qdrant] 写入第 10 批，共 8 条
+2026-07-12 23:17:59.549 | INFO     | app.repositories.qdrant.column_qdrant_repository:upsert:39 - [Qdrant] 向量数据写入完成
+2026-07-12 23:17:59.550 | INFO     | app.services.meta_knowledge_service:_save_columns_to_qdrant:125 - [Qdrant] 向量数据写入完成
+2026-07-12 23:17:59.551 | INFO     | app.services.meta_knowledge_service:_save_value_to_es:128 - [ES] 开始处理全文索引...
+2026-07-12 23:17:59.767 | INFO     | app.services.meta_knowledge_service:_save_value_to_es:141 - [ES] 共 75 条值索引数据，开始写入 ES
+2026-07-12 23:17:59.818 | INFO     | app.services.meta_knowledge_service:_save_value_to_es:143 - [ES] ES 索引写入完成
+2026-07-12 23:17:59.818 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_meta_db:165 - [Build] MySQL 指标信息保存完成
+2026-07-12 23:17:59.835 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:168 - [Build] 准备创建 metric Qdrant collection...
+2026-07-12 23:17:59.941 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:171 - [Build] Qdrant collection 就绪，准备构造向量点...
+2026-07-12 23:17:59.942 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:192 - [Embedding] 共生成 8 条待向量化的文本
+2026-07-12 23:17:59.942 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:198 - [Embedding] 开始调用 DashScope text-embedding-v3，batch_size=10，共 1 批
+2026-07-12 23:17:59.942 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:203 - [Embedding]   batch 1/1, 共 8 条
+2026-07-12 23:18:00.299 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:207 - [Embedding]   batch 1 向量化完成，向量维度=1024
+2026-07-12 23:18:00.299 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:212 - [Embedding] 全部向量化完成，共 8 条向量
+2026-07-12 23:18:00.299 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:216 - [Qdrant] 准备写入 8 条数据到 Qdrant...
+2026-07-12 23:18:00.299 | INFO     | app.repositories.qdrant.metric_qdrant_repository:upsert:23 - [Qdrant] 开始写入 8 条向量数据，batch_size=10
+2026-07-12 23:18:00.299 | INFO     | app.repositories.qdrant.metric_qdrant_repository:upsert:26 - [Qdrant] 写入第 1 批，共 8 条
+2026-07-12 23:18:00.319 | INFO     | app.repositories.qdrant.metric_qdrant_repository:upsert:31 - [Qdrant] 向量数据写入完成
+2026-07-12 23:18:00.320 | INFO     | app.services.meta_knowledge_service:_save_metrics_to_qdrant:218 - [Qdrant] 向量数据写入完成
+2026-07-12 23:18:00.320 | INFO     | __main__:build:45 - [完成] 知识库构建完成！
+2026-07-12 23:18:00.323 | INFO     | __main__:build:50 - [清理] 所有连接已关闭
