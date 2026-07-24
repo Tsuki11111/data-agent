@@ -1,0 +1,60 @@
+2026-07-24 12:23:19.402 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - [ExtractKeywords] 抽取关键词完成: ['统计华北地区的销售总额', '销售总额', '统计', '华北地区']
+2026-07-24 12:23:20.382 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计华北地区的销售总额', '销售总额', '地区', '销售金额', '华北地区', '统计']
+2026-07-24 12:23:20.383 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 正在向量化 6 个关键词...
+2026-07-24 12:23:21.219 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词扩展完成: ['统计华北地区的销售总额', '地区销售额', '销售总额', '华北地区', '统计', '区域销售额', '销售额', '销售收入']
+2026-07-24 12:23:21.220 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 正在向量化 8 个关键词...
+2026-07-24 12:23:21.775 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词扩展完成: ['统计华北地区的销售总额', '销售总额', '华北地区', '统计', '销售']
+2026-07-24 12:23:21.829 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 检索完成: 1 个字段取值 (去重后)
+2026-07-24 12:23:22.040 | INFO     | app.agent.nodes.recall_column:recall_column:38 - [RecallColumn] 向量化完成，开始向量检索...
+2026-07-24 12:23:22.225 | INFO     | app.agent.nodes.recall_column:recall_column:46 - [RecallColumn] 检索完成: 12 个字段 (去重后)
+2026-07-24 12:23:22.262 | INFO     | app.agent.nodes.recall_metric:recall_metric:35 - [RecallMetric] 向量化完成，开始向量检索...
+2026-07-24 12:23:22.390 | INFO     | app.agent.nodes.recall_metric:recall_metric:44 - [RecallMetric] 检索完成: 2 个指标 (去重后)
+2026-07-24 12:23:22.391 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:49 - [MergeRetrievedInfo] 字段按表分组: 5 张表
+2026-07-24 12:23:22.589 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:91 - [MergeRetrievedInfo] 合并完成: 5 张表, 2 个指标
+2026-07-24 12:23:23.323 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - [FilterMetric] 过滤后的指标信息: ['GMV']
+2026-07-24 12:23:23.323 | INFO     | app.agent.nodes.filter_metric:filter_metric:33 - [FilterMetric] 输入 2 个指标 → 输出 1 个指标
+2026-07-24 12:23:23.741 | INFO     | app.agent.nodes.filter_table:filter_table:32 - [FilterTable] 过滤后的表信息: ['fact_order', 'dim_region']
+2026-07-24 12:23:23.741 | INFO     | app.agent.nodes.filter_table:filter_table:33 - [FilterTable] 输入 5 张表 → 输出 2 张表
+2026-07-24 12:23:23.758 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:21 - [AddExtraContext] 数据库信息: {'version': '8.0.46', 'dialect': 'mysql'}
+2026-07-24 12:23:23.758 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:22 - [AddExtraContext] 日期信息: {'date': '2026-07-24', 'weekday': 'Friday', 'quarter': '3'}
+2026-07-24 12:23:23.759 | INFO     | app.agent.nodes.generate_sql:generate_sql:20 - [GenerateSQL] 输入: 2 张表, 1 个指标
+2026-07-24 12:23:25.068 | INFO     | app.agent.nodes.generate_sql:generate_sql:36 - [GenerateSQL] 生成完成: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-24 12:23:25.081 | INFO     | app.agent.nodes.validate_sql:validate_sql:14 - [ValidateSQL] 校验通过
+2026-07-24 12:23:25.082 | INFO     | app.agent.nodes.run_sql:run_sql:14 - [RunSQL] 执行SQL: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-24 12:23:25.085 | INFO     | app.agent.nodes.run_sql:run_sql:16 - [RunSQL] SQL执行结果: [{'sales_total': 41099.5}]
+2026-07-24 12:27:25.182 | INFO     | app.agent.nodes.extract_keywords:extract_keywords:29 - [ExtractKeywords] 抽取关键词完成: ['统计华北地区的销售总额', '统计', '销售总额', '华北地区']
+2026-07-24 12:27:26.075 | INFO     | app.agent.nodes.recall_column:recall_column:31 - [RecallColumn] 关键词: ['统计华北地区的销售总额', '销售金额', '销售总额', '华北地区', '地区', '统计']
+2026-07-24 12:27:26.075 | INFO     | app.agent.nodes.recall_column:recall_column:36 - [RecallColumn] 正在向量化 6 个关键词...
+2026-07-24 12:27:26.991 | INFO     | app.agent.nodes.recall_metric:recall_metric:29 - [RecallMetric] 关键词扩展完成: ['统计华北地区的销售总额', '销售总额', '销售收入', '区域销售额', '华北地区', '统计', '地区销售额', '销售额']
+2026-07-24 12:27:26.991 | INFO     | app.agent.nodes.recall_metric:recall_metric:33 - [RecallMetric] 正在向量化 8 个关键词...
+2026-07-24 12:27:27.906 | INFO     | app.agent.nodes.recall_value:recall_value:30 - [RecallValue] 关键词扩展完成: ['统计华北地区的销售总额', '销售', '销售总额', '华北地区', '统计']
+2026-07-24 12:27:27.932 | INFO     | app.agent.nodes.recall_value:recall_value:38 - [RecallValue] 检索完成: 1 个字段取值 (去重后)
+2026-07-24 12:27:28.234 | INFO     | app.agent.nodes.recall_metric:recall_metric:35 - [RecallMetric] 向量化完成，开始向量检索...
+2026-07-24 12:27:28.415 | INFO     | app.agent.nodes.recall_column:recall_column:38 - [RecallColumn] 向量化完成，开始向量检索...
+2026-07-24 12:27:28.560 | INFO     | app.agent.nodes.recall_metric:recall_metric:44 - [RecallMetric] 检索完成: 2 个指标 (去重后)
+2026-07-24 12:27:28.641 | INFO     | app.agent.nodes.recall_column:recall_column:46 - [RecallColumn] 检索完成: 12 个字段 (去重后)
+2026-07-24 12:27:28.642 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:49 - [MergeRetrievedInfo] 字段按表分组: 5 张表
+2026-07-24 12:27:28.690 | INFO     | app.agent.nodes.merge_retrieved_info:merge_retrieved_info:91 - [MergeRetrievedInfo] 合并完成: 5 张表, 2 个指标
+2026-07-24 12:27:29.394 | INFO     | app.agent.nodes.filter_metric:filter_metric:32 - [FilterMetric] 过滤后的指标信息: ['GMV']
+2026-07-24 12:27:29.394 | INFO     | app.agent.nodes.filter_metric:filter_metric:33 - [FilterMetric] 输入 2 个指标 → 输出 1 个指标
+2026-07-24 12:27:29.633 | INFO     | app.agent.nodes.filter_table:filter_table:32 - [FilterTable] 过滤后的表信息: ['fact_order', 'dim_region']
+2026-07-24 12:27:29.634 | INFO     | app.agent.nodes.filter_table:filter_table:33 - [FilterTable] 输入 5 张表 → 输出 2 张表
+2026-07-24 12:27:29.650 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:21 - [AddExtraContext] 数据库信息: {'version': '8.0.46', 'dialect': 'mysql'}
+2026-07-24 12:27:29.651 | INFO     | app.agent.nodes.add_extra_context:add_extra_context:22 - [AddExtraContext] 日期信息: {'date': '2026-07-24', 'weekday': 'Friday', 'quarter': '3'}
+2026-07-24 12:27:29.652 | INFO     | app.agent.nodes.generate_sql:generate_sql:20 - [GenerateSQL] 输入: 2 张表, 1 个指标
+2026-07-24 12:27:30.956 | INFO     | app.agent.nodes.generate_sql:generate_sql:36 - [GenerateSQL] 生成完成: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-24 12:27:30.962 | INFO     | app.agent.nodes.validate_sql:validate_sql:14 - [ValidateSQL] 校验通过
+2026-07-24 12:27:30.964 | INFO     | app.agent.nodes.run_sql:run_sql:14 - [RunSQL] 执行SQL: SELECT SUM(t1.order_amount) AS sales_total
+FROM fact_order t1
+JOIN dim_region t2 ON t1.region_id = t2.region_id
+WHERE t2.region_name = '华北';
+2026-07-24 12:27:30.968 | INFO     | app.agent.nodes.run_sql:run_sql:16 - [RunSQL] SQL执行结果: [{'sales_total': 41099.5}]
