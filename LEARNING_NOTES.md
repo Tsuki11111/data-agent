@@ -51,6 +51,8 @@ meta_config.yaml
 
 ```
 data-agent/
+├── static/                    # 前端静态文件
+│   └── index.html              # 对话式 UI（Tailwind CSS + 原生 JS）
 ├── app/
 │   ├── agent/                 # LangGraph 智能体
 │   │   ├── graph.py           # 图定义和主流程
@@ -458,23 +460,34 @@ result = await dw_mysql_repository.run(sql)  # 直接执行
 ```
 
 - 在 DW 库执行 SQL 并返回查询结果（`list[dict]`）
+- 通过 `writer({"type": "result", "data": {"sql": sql, "data": result}})` 将 SQL 和结果一并推送到前端
 - 结束整个 Agent 流程
 
 ### Node 编写规范
 
 ```python
 async def node_name(state: DataAgentState, runtime: Runtime[DataAgentContext]):
-    # 1. 读取 state
-    # 2. 读取 context 中的 client/repository
-    # 3. 业务逻辑
-    # 4. 返回 dict（LangGraph 自动 merge 到 state）
-    return {"state_key": value}
+    writer = runtime.stream_writer
+    writer({"type": "progress", "step": "节点名称", "status": "running"})
+    try:
+        # 1. 读取 state
+        # 2. 读取 context 中的 client/repository
+        # 3. 业务逻辑
+        writer({"type": "progress", "step": "节点名称", "status": "success"})
+        # 4. 返回 dict（LangGraph 自动 merge 到 state）
+        return {"state_key": value}
+    except Exception as e:
+        logger.error(f"[NodeName] 失败: {e}")
+        writer({"type": "progress", "step": "节点名称", "status": "error"})
+        writer({"type": "error", "message": str(e)})
+        raise
 ```
 
 常见踩坑：
 - **Node 返回必须是 dict**，直接返回 list 会报 `Expected dict, got [...]`
 - **`chain.invoke()` 是同步方法**，不要加 `await`
 - **`async def` 方法必须 `await`**，忘了就报 `coroutine' object is not iterable`
+- **异常处理**：所有节点统一 try-except，推 error 事件后 raise。`validate_sql` 例外（校验失败返回错误字符串，不走异常）
 
 ### 日志与流式输出
 
@@ -522,12 +535,23 @@ lifespan（应用级启动/关闭）
 ### 1. 应用入口（main.py）
 
 ```python
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 app = FastAPI(lifespan=lifespan)
 app.include_router(query_router)
+
+# 挂载前端静态文件
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/")
+async def index():
+    return FileResponse("static/index.html")
 ```
 
 - `lifespan` 管理所有后端的声明周期
 - `include_router` 注册路由
+- `GET /` 返回对话式前端页面（详见 [[data-agent/07 - 前端页面设计与实现|前端页面]]）
 
 ---
 
@@ -828,18 +852,63 @@ response = await call_next(request)
 
 ---
 
-### 6. 运行方式
+### 6. 前端页面
 
-```bash
-fastapi dev main.py        # 生产推荐：热重载 + 自动发现
+2025 年 7 月新增了对话式前端页面 `static/index.html`：
+
+- **对话式 UI**：用户与 AI 以聊天气泡交互，含用户头像（人形图标）和 AI 头像（"掌"字蓝紫渐变）
+- **实时进度**：通过 SSE 协议接收后端 LangGraph 的 12 个节点执行进度，动态更新步骤状态
+- **SQL 预览**：生成 SQL 后即时展示，支持一键复制
+- **数据表格**：查询结果以表格形式展示
+- **错误提示**：红色横幅展示错误信息，可关闭
+- **输入框**：固定在底部，支持自动增高和 Shift+Enter 换行
+- **技术栈**：单 HTML 文件 + Tailwind CSS CDN + 原生 JS + `fetch` + `ReadableStream`
+
+详情见 Obsidian 知识库 [[data-agent/07 - 前端页面设计与实现|前端页面设计与实现]]。
+
+### 7. Embedding 分批修复
+
+DashScope text-embedding-v3 API 限制每批最多 10 条文本。`DashScopeEmbeddings.aembed_documents` 原来一次性发送所有文本，超过 10 条时返回 400。已改为自动分批：
+
+```python
+async def aembed_documents(self, texts: list[str]) -> list[list[float]]:
+    BATCH_SIZE = 10
+    all_embeddings = []
+    for i in range(0, len(texts), BATCH_SIZE):
+        batch = texts[i:i + BATCH_SIZE]
+        # 逐批调用 API
+        embeddings = await self._embed_batch(batch)
+        all_embeddings.extend(embeddings)  # 结果顺序合并
+    return all_embeddings
 ```
 
-`fastapi dev` 与手动 `__main__` 的对比：
+### 8. 日志编码修复
 
-| 方式 | 生命周期 | session 管理 | 适用场景 |
-|------|---------|-------------|---------|
-| `fastapi dev` | `lifespan` 自动 init/close | FastAPI 依赖注入自动管理 | 生产/API 服务 |
-| `graph.py __main__` | 手动 init/close | `async with session` 包裹 graph | 本地调试/测试 |
+Windows 上 loguru 输出到 `sys.stdout` 时默认使用系统编码（GBK），导致中文日志显示为乱码。`app/core/log.py` 通过 `io.TextIOWrapper` 将 stdout 强制设为 UTF-8：
+
+```python
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+logger.add(sink=sys.stdout, ...)
+```
+
+### 9. 统一异常处理
+
+所有 12 个节点统一采用 try-except 模式：
+
+```python
+writer({"type": "progress", "step": "...", "status": "running"})
+try:
+    # 业务逻辑
+    writer({"type": "progress", "step": "...", "status": "success"})
+    return {...}
+except Exception as e:
+    logger.error(f"[...] 失败: {e}")
+    writer({"type": "progress", "step": "...", "status": "error"})
+    writer({"type": "error", "message": str(e)})
+    raise
+```
+
+`validate_sql` 例外：校验失败不抛异常，`return {"error": str(e)}` 让 correct_sql 继续流程。
 
 ### 7. 踩坑记录（FastAPI 相关）
 
@@ -969,6 +1038,10 @@ await meta_mysql_client_manager.close()
 | 导入错误的 `Annotated` | FastAPIError: 非法的 Pydantic 字段类型 | `from sqlalchemy.sql.annotation import Annotated` 导入了 SQLAlchemy 内部类，而非 `typing.Annotated` | 改为 `from typing import Annotated` |
 | jieba 收到 Pydantic 对象而非字符串 | AttributeError: 'QuerySchema' object has no attribute 'decode' | `query_router` 将整个 `QuerySchema` 对象传给了 `query_service.query(query)`，存入 state 后 jieba 获取到的是对象而非 `query` 字段 | `query_service.query(query.query)` 传递字符串 |
 | `correct_sql` 缺少 `return` | 修正后的 SQL 未更新到 state | `correct_sql()` 调用了 LLM 但没 return | 加上 `return {"sql": result}` |
+| Embedding API batch > 10 | 400 错误，"should not be larger than 10" | DashScope 单次限制 10 条 | `aembed_documents` 自动按 10 条分批 |
+| 中文日志乱码 | 终端显示 `�������` | Windows stdout 编码是 GBK | `sys.stdout = TextIOWrapper(..., encoding='utf-8')` |
+| SSE 消息前端收不到 | 前端用 `EventSource` 无响应 | `EventSource` 只支持 GET，API 是 POST | 改用 `fetch` + `ReadableStream` |
+| hot reload 后日志消失 | 热重载后 logger 配置失效 | uvicorn --reload 重启进程 | 修正 log.py 的 stdout 编码 |
 
 ---
 
@@ -979,8 +1052,12 @@ await meta_mysql_client_manager.close()
 $env:DASHSCOPE_API_KEY="sk-你的Key"
 python app/scripts/build_meta_knowledge.py
 
-# 运行 NL2SQL 智能体
-python app/agent/graph.py
+# 启动 API 服务（推荐，带前端页面）
+.venv/Scripts/uvicorn main:app --reload --host localhost --port 8000
+# 浏览器打开 http://localhost:8000
+
+# 调试 NL2SQL 智能体（不经过 API）
+python -m app.agent.graph
 ```
 
 | 存储 | 验证方式 |
