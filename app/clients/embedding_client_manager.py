@@ -44,24 +44,28 @@ class DashScopeEmbeddings:
         return result["data"][0]["embedding"]
 
     async def aembed_documents(self, texts: list[str]) -> list[list[float]]:
-        """异步调用：批量文本向量化"""
+        """异步调用：批量文本向量化（自动分批，API 限制每批最多 10 条）"""
+        BATCH_SIZE = 10
+        all_embeddings = []
         async with aiohttp.ClientSession() as session:
-            payload = self._build_payload(texts)
-            async with session.post(
-                self._build_url(),
-                headers=self._headers,
-                json=payload,
-            ) as response:
-                if not response.ok:
-                    body = await response.text()
-                    raise RuntimeError(
-                        f"Embedding API 错误: status={response.status}, "
-                        f"body={body}"
-                    )
-                result = await response.json()
-                # 返回结果按输入顺序排列
-                embeddings = [item["embedding"] for item in result["data"]]
-                return embeddings
+            for i in range(0, len(texts), BATCH_SIZE):
+                batch = texts[i:i + BATCH_SIZE]
+                payload = self._build_payload(batch)
+                async with session.post(
+                    self._build_url(),
+                    headers=self._headers,
+                    json=payload,
+                ) as response:
+                    if not response.ok:
+                        body = await response.text()
+                        raise RuntimeError(
+                            f"Embedding API 错误: status={response.status}, "
+                            f"body={body}"
+                        )
+                    result = await response.json()
+                    embeddings = [item["embedding"] for item in result["data"]]
+                    all_embeddings.extend(embeddings)
+            return all_embeddings
 
 
 class EmbeddingClientManager:

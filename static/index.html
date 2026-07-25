@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掌柜问数</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <style>
+        @keyframes pulse-dot {
+            0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+        .dot-pulse span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse-dot 1.4s ease-in-out infinite both;
+        }
+        .dot-pulse span:nth-child(1) { animation-delay: -0.32s; }
+        .dot-pulse span:nth-child(2) { animation-delay: -0.16s; }
+        .dot-pulse span:nth-child(3) { animation-delay: 0s; }
+
+        .sql-box {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.8125rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .slide-enter {
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chat-scroll {
+            scroll-behavior: smooth;
+        }
+        .chat-scroll::-webkit-scrollbar { width: 5px; }
+        .chat-scroll::-webkit-scrollbar-track { background: transparent; }
+        .chat-scroll::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+
+        /* Step card styling */
+        .step-item { transition: all 0.25s ease; }
+        .step-item + .step-item { border-top: 1px solid #f3f4f6; }
+        .step-item .step-dot { transition: all 0.3s ease; }
+        .step-item.running .step-dot { background: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); }
+        .step-item.success .step-dot { background: #22c55e; }
+        .step-item.error .step-dot { background: #ef4444; }
+        .step-item.pending .step-dot { background: #d1d5db; }
+
+        .thinking-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Table styling */
+        .data-table { border-collapse: separate; border-spacing: 0; }
+        .data-table th { position: sticky; top: 0; z-index: 1; }
+        .data-table td, .data-table th {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .data-table tr:last-child td { border-bottom: none; }
+    </style>
+</head>
+<body class="bg-gray-50 h-screen flex flex-col overflow-hidden">
+    <!-- Header -->
+    <header class="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-center gap-2">
+        <h1 class="text-lg font-bold text-gray-800 tracking-tight">
+            <span class="text-blue-600">掌柜</span>问数
+        </h1>
+        <span class="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">智能数据助手</span>
+    </header>
+
+    <!-- Chat Messages -->
+    <div id="chatContainer" class="flex-1 overflow-y-auto chat-scroll px-4 py-4 space-y-4">
+        <!-- Welcome message -->
+        <div class="flex justify-center" id="welcomeBlock">
+            <div class="text-center max-w-md py-12">
+                <div class="text-5xl mb-3">🔍</div>
+                <p class="text-gray-400 text-base">输入你的问题，开始数据分析</p>
+                <p class="text-gray-300 text-xs mt-1">例如「统计华北地区的销售总额」</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input Area (fixed bottom) -->
+    <div class="flex-shrink-0 bg-white border-t border-gray-200 px-4 py-3">
+        <div class="max-w-4xl mx-auto flex gap-3 items-end">
+            <div class="flex-1 relative">
+                <textarea id="queryInput" rows="1"
+                    class="block w-full px-4 py-2.5 pr-10 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700 placeholder-gray-400 resize-none overflow-hidden"
+                    placeholder="输入你的问题…"
+                    autofocus></textarea>
+            </div>
+            <button id="sendBtn"
+                class="px-5 py-2.5 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2 flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 0l-7 7m7-7l7 7"/>
+                </svg>
+                发送
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ── Step Definitions ──
+        const STEPS = [
+            { key: '抽取关键词', label: '抽取关键词', icon: '🔑' },
+            { key: '召回字段信息', label: '字段检索', icon: '📋' },
+            { key: '召回指标信息', label: '指标检索', icon: '📊' },
+            { key: '召回字段取值', label: '取值范围检索', icon: '🔢' },
+            { key: '合并召回信息', label: '合并召回信息', icon: '🔗' },
+            { key: '过滤表信息', label: '表信息过滤', icon: '📑' },
+            { key: '过滤指标信息', label: '指标信息过滤', icon: '🎯' },
+            { key: '添加额外上下文', label: '补充上下文', icon: '📎' },
+            { key: '生成SQL语句', label: '生成 SQL', icon: '⚡' },
+            { key: '校验SQL语句', label: '校验 SQL', icon: '✅' },
+            { key: '校正SQL语句', label: '修正 SQL', icon: '🔧' },
+            { key: '执行SQL语句', label: '执行 SQL', icon: '🚀' },
+        ];
+
+        // ── DOM References ──
+        const chatContainer = document.getElementById('chatContainer');
+        const welcomeBlock = document.getElementById('welcomeBlock');
+        const queryInput = document.getElementById('queryInput');
+        const sendBtn = document.getElementById('sendBtn');
+        let currentAbortController = null;
+
+        // ── Textarea auto-resize ──
+        queryInput.addEventListener('input', () => {
+            queryInput.style.height = 'auto';
+            queryInput.style.height = Math.min(queryInput.scrollHeight, 120) + 'px';
+        });
+
+        // ── Create User Message Bubble ──
+        function addUserMessage(text) {
+            const div = document.createElement('div');
+            div.className = 'flex justify-end items-end gap-2 slide-enter';
+            div.innerHTML = `
+                <div class="max-w-[75%] bg-blue-600 text-white rounded-2xl rounded-br-sm px-4 py-2.5 text-sm leading-relaxed shadow-sm">
+                    ${escapeHtml(text)}
+                </div>
+                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 border-2 border-white shadow-sm">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </div>
+            `;
+            chatContainer.appendChild(div);
+            return div;
+        }
+
+        // ── Create Assistant Message Bubble ──
+        function createAssistantBubble() {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'flex items-end gap-2 slide-enter';
+
+            // AI avatar
+            const avatar = document.createElement('div');
+            avatar.className = 'w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0 border-2 border-white shadow-sm';
+            avatar.innerHTML = '<span class="text-white text-xs font-bold">掌</span>';
+            wrapper.appendChild(avatar);
+
+            // Bubble content
+            const bubble = document.createElement('div');
+            bubble.className = 'max-w-[75%] bg-white border border-gray-200 rounded-2xl rounded-bl-sm overflow-hidden shadow-sm';
+
+            // Thinking / step pipeline section
+            const thinkingSection = document.createElement('div');
+            thinkingSection.className = 'thinking-card px-4 py-3';
+            thinkingSection.innerHTML = `
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">分析过程</span>
+                    <span id="thinkingStatus" class="text-xs text-blue-600 font-medium flex items-center gap-1.5">
+                        <span class="inline-block w-2.5 h-2.5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></span>
+                        处理中
+                    </span>
+                </div>
+                <div id="stepList" class="space-y-0"></div>
+            `;
+            bubble.appendChild(thinkingSection);
+
+            // Result section
+            const resultSection = document.createElement('div');
+            resultSection.className = 'hidden';
+            resultSection.innerHTML = `
+                <div class="px-4 pt-3 pb-1">
+                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">查询结果</span>
+                </div>
+                <!-- SQL -->
+                <div id="sqlContainer" class="hidden px-4 pb-3">
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="text-xs font-medium text-gray-400">SQL 语句</span>
+                        <button onclick="copySql(this)" class="text-xs text-gray-400 hover:text-gray-600 transition-colors flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                            复制
+                        </button>
+                    </div>
+                    <div id="sqlDisplay" class="sql-box"></div>
+                </div>
+                <!-- Data Table -->
+                <div id="dataTableContainer" class="hidden px-4 pb-4 overflow-x-auto">
+                    <table class="data-table min-w-full text-xs">
+                        <thead id="tableHead"></thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            `;
+            bubble.appendChild(resultSection);
+
+            // Error section
+            const errorSection = document.createElement('div');
+            errorSection.className = 'hidden';
+            errorSection.innerHTML = `
+                <div class="px-4 pb-3">
+                    <div class="flex items-start gap-2 text-red-600 bg-red-50 rounded-lg p-3 text-sm">
+                        <span class="flex-shrink-0 mt-0.5">⚠️</span>
+                        <span id="errorMessage"></span>
+                    </div>
+                </div>
+            `;
+            bubble.appendChild(errorSection);
+
+            wrapper.appendChild(bubble);
+            chatContainer.appendChild(wrapper);
+            return {
+                wrapper,
+                thinkingSection,
+                thinkingStatus: thinkingSection.querySelector('#thinkingStatus'),
+                stepList: thinkingSection.querySelector('#stepList'),
+                resultSection,
+                sqlContainer: resultSection.querySelector('#sqlContainer'),
+                sqlDisplay: resultSection.querySelector('#sqlDisplay'),
+                dataTableContainer: resultSection.querySelector('#dataTableContainer'),
+                tableHead: resultSection.querySelector('#tableHead'),
+                tableBody: resultSection.querySelector('#tableBody'),
+                errorSection,
+                errorMessage: errorSection.querySelector('#errorMessage'),
+            };
+        }
+
+        // ── Render Steps ──
+        function renderSteps(stepListEl) {
+            stepListEl.innerHTML = STEPS.map(step => `
+                <div class="step-item pending flex items-center gap-2.5 py-2" data-key="${step.key}">
+                    <span class="step-dot w-2 h-2 rounded-full flex-shrink-0"></span>
+                    <span class="step-icon flex-shrink-0 text-xs">${step.icon}</span>
+                    <span class="step-label text-xs text-gray-600 flex-1">${step.label}</span>
+                    <span class="step-status text-xs text-gray-400"></span>
+                </div>
+            `).join('');
+        }
+
+        // ── Update Step Progress ──
+        function updateStepProgress(stepKey, status, stepListEl) {
+            const el = stepListEl?.querySelector(`[data-key="${CSS.escape(stepKey)}"]`);
+            if (!el) return;
+
+            el.className = 'step-item flex items-center gap-2.5 py-2';
+            const statusEl = el.querySelector('.step-status');
+
+            switch (status) {
+                case 'running':
+                    el.classList.add('running');
+                    statusEl.innerHTML = '<span class="flex items-center gap-1 text-blue-600">' +
+                        '<span class="inline-block w-2.5 h-2.5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></span>' +
+                        '</span>';
+                    break;
+                case 'success':
+                    el.classList.add('success');
+                    statusEl.textContent = '✅';
+                    break;
+                case 'error':
+                    el.classList.add('error');
+                    statusEl.textContent = '❌';
+                    break;
+            }
+        }
+
+        // ── SSE Stream Consumer ──
+        async function sendQuery(query) {
+            if (currentAbortController) {
+                currentAbortController.abort();
+            }
+            currentAbortController = new AbortController();
+            const signal = currentAbortController.signal;
+
+            // Hide welcome
+            welcomeBlock.classList.add('hidden');
+
+            // Add user message
+            addUserMessage(query);
+
+            // Create assistant bubble
+            const bubble = createAssistantBubble();
+            renderSteps(bubble.stepList);
+
+            // Scroll to bottom
+            scrollToBottom();
+
+            // Set loading state
+            setLoading(true);
+
+            let resultShown = false;
+
+            try {
+                const response = await fetch('/api/query', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query }),
+                    signal,
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop() || '';
+
+                    for (const line of lines) {
+                        const trimmed = line.trim();
+                        if (!trimmed.startsWith('data: ')) continue;
+                        try {
+                            const data = JSON.parse(trimmed.slice(6));
+                            handleSSEMessage(data, bubble);
+                        } catch (e) {
+                            console.warn('Failed to parse SSE message:', trimmed, e);
+                        }
+                    }
+
+                    // scroll as progress updates come in
+                    scrollToBottom();
+                }
+
+                // Stream ended — if no result was shown, mark done
+                if (!resultShown) {
+                    bubble.thinkingStatus.innerHTML = '✅ 完成';
+                }
+                scrollToBottom();
+
+            } catch (err) {
+                if (err.name === 'AbortError') return;
+                showError(err.message || '请求失败，请重试', bubble);
+                bubble.thinkingStatus.innerHTML = '❌ 失败';
+                scrollToBottom();
+            } finally {
+                setLoading(false);
+                currentAbortController = null;
+            }
+        }
+
+        function scrollToBottom() {
+            requestAnimationFrame(() => {
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            });
+        }
+
+        // ── SSE Message Handler ──
+        function handleSSEMessage(data, bubble) {
+            switch (data.type) {
+                case 'progress':
+                    updateStepProgress(data.step, data.status, bubble.stepList);
+                    // Update thinking status
+                    if (data.status === 'running') {
+                        bubble.thinkingStatus.innerHTML = `<span class="inline-block w-2.5 h-2.5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></span> ${data.step}`;
+                    } else if (data.status === 'success') {
+                        bubble.thinkingStatus.innerHTML = '✅ 完成';
+                    } else if (data.status === 'error') {
+                        bubble.thinkingStatus.innerHTML = '❌ 失败';
+                    }
+                    break;
+                case 'result':
+                    showResult(data.data, bubble);
+                    bubble.thinkingStatus.innerHTML = '✅ 完成';
+                    break;
+                case 'error':
+                    showError(data.message, bubble);
+                    bubble.thinkingStatus.innerHTML = '❌ 失败';
+                    break;
+            }
+        }
+
+        // ── Result Display ──
+        function showResult(data, bubble) {
+            bubble.resultSection.classList.remove('hidden');
+
+            // Show SQL
+            if (data.sql) {
+                bubble.sqlContainer.classList.remove('hidden');
+                bubble.sqlDisplay.textContent = data.sql;
+            }
+
+            // Show table
+            if (data.data && Array.isArray(data.data) && data.data.length > 0) {
+                bubble.dataTableContainer.classList.remove('hidden');
+                const columns = Object.keys(data.data[0]);
+                bubble.tableHead.innerHTML = '<tr>' + columns.map(c =>
+                    `<th class="px-3 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider whitespace-nowrap bg-gray-50 border-b border-gray-200">${escapeHtml(c)}</th>`
+                ).join('') + '</tr>';
+                bubble.tableBody.innerHTML = data.data.map(row =>
+                    '<tr class="hover:bg-gray-50 transition-colors">' +
+                    columns.map(c =>
+                        `<td class="px-3 py-2 text-xs text-gray-700 whitespace-nowrap">${row[c] != null ? escapeHtml(String(row[c])) : '-'}</td>`
+                    ).join('') +
+                    '</tr>'
+                ).join('');
+            } else if (data.data && typeof data.data === 'object') {
+                bubble.dataTableContainer.classList.remove('hidden');
+                bubble.tableHead.innerHTML = '<tr><th class="px-3 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider bg-gray-50 border-b border-gray-200">结果</th></tr>';
+                bubble.tableBody.innerHTML = '<tr><td class="px-3 py-2 text-xs text-gray-700">' + escapeHtml(JSON.stringify(data.data)) + '</td></tr>';
+            }
+        }
+
+        // ── Error Display ──
+        function showError(message, bubble) {
+            bubble.errorSection.classList.remove('hidden');
+            bubble.errorMessage.textContent = message;
+        }
+
+        // ── Utilities ──
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        function copySql(btn) {
+            const sql = btn.closest('#sqlContainer')?.querySelector('.sql-box')?.textContent;
+            if (!sql) return;
+            navigator.clipboard.writeText(sql).then(() => {
+                const orig = btn.innerHTML;
+                btn.innerHTML = '✅ 已复制';
+                setTimeout(() => btn.innerHTML = orig, 2000);
+            });
+        }
+
+        function setLoading(loading) {
+            sendBtn.disabled = loading;
+            if (loading) {
+                sendBtn.innerHTML = `
+                    <div class="dot-pulse flex items-center gap-1">
+                        <span class="bg-white"></span>
+                        <span class="bg-white"></span>
+                        <span class="bg-white"></span>
+                    </div>
+                `;
+            } else {
+                sendBtn.innerHTML = `
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 0l-7 7m7-7l7 7"/>
+                    </svg>
+                    发送
+                `;
+            }
+        }
+
+        // ── Event Bindings ──
+        sendBtn.addEventListener('click', () => {
+            const query = queryInput.value.trim();
+            if (!query || sendBtn.disabled) return;
+            queryInput.value = '';
+            queryInput.style.height = 'auto';
+            sendQuery(query);
+        });
+
+        queryInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                const query = queryInput.value.trim();
+                if (!query || sendBtn.disabled) return;
+                queryInput.value = '';
+                queryInput.style.height = 'auto';
+                sendQuery(query);
+            }
+        });
+
+        console.log('🧮 掌柜问数 - 智能数据助手已加载');
+    </script>
+</body>
+</html>
