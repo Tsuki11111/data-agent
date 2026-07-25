@@ -11,27 +11,34 @@ from app.prompt.prompt_loader import load_prompt
 
 async def generate_sql(state: DataAgentState, runtime: Runtime[DataAgentContext]):
     writer = runtime.stream_writer
-    writer("正在生成SQL语句")
-    table_infos = state["table_infos"]
-    metric_infos = state["metric_infos"]
-    date_info = state["date_info"]
-    db_info = state["db_info"]
-    query = state["query"]
-    logger.info(f"[GenerateSQL] 输入: {len(table_infos)} 张表, {len(metric_infos)} 个指标")
-    prompt = PromptTemplate(
-        template=load_prompt("generate_sql"),
-        input_variables=["query", "table_infos", "metric_infos", "date_info", "db_info"]
-    )
-    output_parser = StrOutputParser()
-    chain = prompt | llm | output_parser
-    result = await chain.ainvoke(
-        {
-            "query": query,
-            "table_infos": yaml.dump(table_infos, allow_unicode=True, sort_keys=False),
-            "metric_infos": yaml.dump(metric_infos, allow_unicode=True, sort_keys=False),
-            "date_info": yaml.dump(date_info, allow_unicode=True, sort_keys=False),
-            "db_info": yaml.dump(db_info, allow_unicode=True, sort_keys=False)
-        }
-    )
-    logger.info(f"[GenerateSQL] 生成完成: {result[:200] if len(result) > 200 else result}")
-    return {"sql": result}
+    writer({"type": "progress", "step": "生成SQL语句", "status": "running"})
+    try:
+        table_infos = state["table_infos"]
+        metric_infos = state["metric_infos"]
+        date_info = state["date_info"]
+        db_info = state["db_info"]
+        query = state["query"]
+        logger.info(f"[GenerateSQL] 输入: {len(table_infos)} 张表, {len(metric_infos)} 个指标")
+        prompt = PromptTemplate(
+            template=load_prompt("generate_sql"),
+            input_variables=["query", "table_infos", "metric_infos", "date_info", "db_info"]
+        )
+        output_parser = StrOutputParser()
+        chain = prompt | llm | output_parser
+        result = await chain.ainvoke(
+            {
+                "query": query,
+                "table_infos": yaml.dump(table_infos, allow_unicode=True, sort_keys=False),
+                "metric_infos": yaml.dump(metric_infos, allow_unicode=True, sort_keys=False),
+                "date_info": yaml.dump(date_info, allow_unicode=True, sort_keys=False),
+                "db_info": yaml.dump(db_info, allow_unicode=True, sort_keys=False)
+            }
+        )
+        logger.info(f"[GenerateSQL] 生成完成: {result[:200] if len(result) > 200 else result}")
+        writer({"type": "progress", "step": "生成SQL语句", "status": "success"})
+        return {"sql": result}
+    except Exception as e:
+        logger.error(f"[GenerateSQL] 生成SQL语句失败: {e}")
+        writer({"type": "progress", "step": "生成SQL语句", "status": "error"})
+        writer({"type": "error", "message": str(e)})
+        raise

@@ -8,11 +8,19 @@ from app.agent.state import DataAgentState
 
 async def run_sql(state: DataAgentState, runtime: Runtime[DataAgentContext]):
     writer = runtime.stream_writer
-    writer("执行SQL语句")
-    sql = state.get("sql")
-    dw_mysql_repository = runtime.context["dw_mysql_repository"]
-    logger.info(f"[RunSQL] 执行SQL: {sql}")
-    result = await dw_mysql_repository.run(sql)
-    logger.info(f"[RunSQL] SQL执行结果: {result}")
+    writer({"type": "progress", "step": "执行SQL语句", "status": "running"})
+    try:
+        sql = state.get("sql")
+        dw_mysql_repository = runtime.context["dw_mysql_repository"]
+        logger.info(f"[RunSQL] 执行SQL: {sql}")
+        result = await dw_mysql_repository.run(sql)
+        logger.info(f"[RunSQL] SQL执行结果: {result}")
+        writer({"type": "progress", "step": "执行SQL语句", "status": "success"})
+        return {"result": result}
+    except Exception as e:
+        logger.error(f"[RunSQL] 执行SQL语句失败: {e}")
+        writer({"type": "progress", "step": "执行SQL语句", "status": "error"})
+        writer({"type": "error", "message": str(e)})
+        raise
 
 
