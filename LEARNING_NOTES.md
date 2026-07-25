@@ -56,7 +56,7 @@ data-agent/
 │   │   ├── graph.py           # 图定义和主流程
 │   │   ├── state.py           # 状态 schema
 │   │   ├── context.py         # 上下文 schema（共享资源）
-│   │   ├── llm.py             # LLM 客户端
+│   │   ├── llm/__init__.py    # LLM 客户端（langchain init_chat_model）
 │   │   └── nodes/             # 各个图节点
 │   │       ├── extract_keywords.py
 │   │       ├── recall_column.py
@@ -79,13 +79,15 @@ data-agent/
 │   │   ├── extend_keywords_for_column_recall.prompt
 │   │   ├── extend_keywords_for_metric_recall.prompt
 │   │   └── extend_keywords_for_value_recall.prompt
-│   │   ├── filter_table_info.prompt
-│   │   ├── filter_metric_info.prompt
-│   │   ├── generate_sql.prompt
-│   │   ├── correct_sql.prompt
-│   │   ├── extend_keywords_for_column_recall.prompt
-│   │   ├── extend_keywords_for_metric_recall.prompt
-│   │   └── extend_keywords_for_value_recall.prompt
+│   │
+│   ├── prompt/                  # Prompt 加载工具
+│   │   └── prompt_loader.py     # load_prompt(名称) → 读取 prompts/ 目录下 .prompt 文件
+│   │
+│   ├── api/                     # FastAPI 接口层
+│   │   ├── lifespan.py          # 应用生命周期（初始化/关闭所有 client）
+│   │   ├── dependencies.py      # FastAPI 依赖注入（session/Repository 生命周期管理）
+│   │   ├── schemas/query_schema.py
+│   │   └── router/query_router.py
 │   │
 │   ├── clients/               # 各种外部服务的客户端管理器
 │   │   ├── mysql_client_manager.py
@@ -398,25 +400,65 @@ for vector in vectors:
 
 #### 7. add_extra_context（添加上下文）
 
-当前为占位节点（`asyncio.sleep(2)`）。
+```python
+today = datetime.date.today()
+date_str = today.strftime("%Y-%m-%d")
+weekday = today.strftime("%A")
+quarter = f"{(today.month-1) // 3 + 1}"
+db = await dw_mysql_repository.get_db_info()
+```
+
+- 获取当前日期信息（年-月-日、星期、季度）
+- 通过 `dw_mysql_repository.get_db_info()` 获取数据库版本和方言（`SELECT version()`）
+- 返回 `{"date_info": ..., "db_info": ...}`
 
 #### 8. generate_sql（SQL 生成）
 
-当前为占位节点（`asyncio.sleep(2)`）。
+```python
+chain = prompt | llm | output_parser
+result = await chain.ainvoke({...})
+return {"sql": result}
+```
+
+- 输入：query + table_infos + metric_infos + date_info + db_info（均通过 YAML 格式化）
+- 调用 LLM 生成 SQL（`/prompts/generate_sql.prompt`）
+- 使用 `langchain` 的 `PromptTemplate` + `StrOutputParser` 流水线
+- 返回 `{"sql": result}`
 
 #### 9. validate_sql（SQL 校验）
 
-当前为占位校验：直接返回 `{"error": None}`，视为 SQL 校验通过。
+```python
+try:
+    await dw_repository.validate(sql)  # EXPLAIN {sql}
+    return {"error": None}
+except Exception as e:
+    return {"error": str(e)}
+```
 
-**条件边决策**：`error` 为 `None` → 走 `run_sql`；有内容 → 走 `correct_sql`。
+- 用 `EXPLAIN {sql}` 在 DW 库执行语法校验
+- 成功 → `error=None`（走 `run_sql`）
+- 失败 → `error=错误信息`（走 `correct_sql`）
+- 不再只是占位
 
 #### 10. correct_sql（SQL 修正）
 
-当前为占位节点。
+```python
+chain = prompt | llm | output_parser
+result = await chain.ainvoke({..., "error": error, "sql": sql})
+```
+
+- 输入：原始 query + 表结构/指标/日期/DB 信息 + 错误信息 + 错误的 SQL
+- 调用 LLM 根据错误信息修正 SQL（`/prompts/correct_sql.prompt`）
+- ⚠️ 注意：当前 `correct_sql` 没有 `return` 语句，修正后的 SQL 不会更新到 state 中
 
 #### 11. run_sql（执行 SQL）
 
-当前为占位节点（`asyncio.sleep(2)`）。
+```python
+result = await dw_mysql_repository.run(sql)  # 直接执行
+```
+
+- 在 DW 库执行 SQL 并返回查询结果（`list[dict]`）
+- 结束整个 Agent 流程
 
 ### Node 编写规范
 
@@ -451,6 +493,362 @@ writer("正在生成SQL语句")     # 会作为 stream_mode='custom' 的一个 c
 - `stream_writer` 用于给用户展示实时进度（LangGraph 的 `astream` 模式下可见）
 
 ---
+
+## 核心流程三：FastAPI 接口层
+
+data-agent 项目的 FastAPI 应用整体架构如下（对应 Obsidian 知识库 `FastAPI/` 目录可参考详细文章）：
+
+```
+请求 ──► 中间件（待添加）──► 路由 ──► StreamingResponse ──► SSE流
+                              │
+                              ├── Depends(get_query_service)
+                              │       ├── meta_mysql_repository ← session ← get_meta_session()
+                              │       ├── column_qdrant_repository ← qdrant_client（lifespan 管理）
+                              │       ├── metric_qdrant_repository
+                              │       ├── value_es_repository
+                              │       ├── dw_mysql_repository ← session ← get_dw_session()
+                              │       └── embedding_client ← lifespan 管理
+                              │
+                              └── AsyncSession（请求级，自动开启和关闭）
+
+lifespan（应用级启动/关闭）
+  ├── qdrant_client_manager.init()
+  ├── embedding_client_manager.init()
+  ├── es_client_manager.init()
+  ├── dw_mysql_client_manager.init()
+  └── meta_mysql_client_manager.init()
+```
+
+### 1. 应用入口（main.py）
+
+```python
+app = FastAPI(lifespan=lifespan)
+app.include_router(query_router)
+```
+
+- `lifespan` 管理所有后端的声明周期
+- `include_router` 注册路由
+
+---
+
+### 2. 生命周期事件（lifespan.py）
+
+> 详细参考：Obsidian 知识库 `FastAPI/03 - 生命周期事件（Lifespan）.md`
+
+FastAPI 提供两种生命周期管理方式：
+
+| 版本 | 方式 | 状态 |
+|------|------|------|
+| FastAPI < 0.93 | `@app.on_event("startup")` / `@app.on_event("shutdown")` | 旧 API，不推荐 |
+| FastAPI >= 0.93 | `@asynccontextmanager lifespan` | ✅ 推荐方式 |
+
+#### 项目的实际使用
+
+```python
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # ─── 启动阶段 ───
+    qdrant_client_manager.init()
+    embedding_client_manager.init()
+    es_client_manager.init()
+    dw_mysql_client_manager.init()
+    meta_mysql_client_manager.init()
+    yield   # ← 应用运行期间停在这里
+    # ─── 关闭阶段 ───
+    await qdrant_client_manager.close()
+    await embedding_client_manager.close()
+    await es_client_manager.close()
+    await dw_mysql_client_manager.close()
+    await meta_mysql_client_manager.close()
+```
+
+#### 原理
+
+1. Uvicorn 启动时调用 `lifespan` 上下文管理器
+2. 执行 `yield` 前代码（初始化资源）
+3. 应用开始接收请求
+4. 关闭时执行 `yield` 后代码（清理资源）
+
+基于 ASGI `lifespan` 协议：
+- 应用发送 `{"type": "lifespan.startup"}` 消息 → 执行 `yield` 前
+- 应用发送 `{"type": "lifespan.shutdown"}` 消息 → 执行 `yield` 后
+
+#### 与 graph.py 中 `__main__` 的关系
+
+| 方式 | 生命周期管理 | 适用场景 |
+|------|-------------|---------|
+| `fastapi dev` | `lifespan` 自动管理 | 生产/API 服务 |
+| `graph.py __main__` | 手动 init/close + `async with session` 包裹 graph | 本地调试单次运行 |
+
+---
+
+### 3. 依赖注入（dependencies.py）
+
+> 详细参考：Obsidian 知识库 `FastAPI/04 - 依赖注入（Dependencies）.md`
+
+#### 什么是依赖注入
+
+依赖注入（Dependency Injection, DI）是 FastAPI 内置的**让框架自动提供函数所需参数**的模式。
+
+**优点**：
+- 消除样板代码（不用手动创建 session）
+- 统一管理资源生命周期
+- 易于测试（可以注入 mock）
+- 依赖可复用
+
+#### 项目中的层级结构
+
+```
+get_meta_session()         ──► get_meta_mysql_repository() ──┐
+get_dw_session()           ──► get_dw_mysql_repository()   ──┤
+get_column_qdrant_repository()                              ──┤
+get_metric_qdrant_repository()                              ──┤──► get_query_service()
+get_value_es_repository()                                   ──┤
+get_embedding_client()                                      ──┘
+```
+
+#### session 管理（底层依赖）
+
+```python
+async def get_meta_session():
+    async with meta_mysql_client_manager.session_factory() as meta_session:
+        yield meta_session  # 请求进来创建 session，结束自动关闭
+```
+
+- `yield` 表示有清理逻辑：请求结束后恢复上下文，关闭 session
+- `async with` 确保即使请求异常也能关闭连接
+
+#### Annotated + Depends 模式
+
+```python
+# Annotated[类型, 元数据]
+async def query_handler(
+    query: QuerySchema,
+    query_service: Annotated[QueryService, Depends(get_query_service)]
+):
+```
+
+- `Annotated` 是 Python 3.9+ 的类型注解，FastAPI 解析其中的元数据来决定如何处理参数
+- 比传统的 `= Depends()` 写法更清晰
+
+#### 执行流程
+
+1. FastAPI 解析路由签名，发现 `Depends(get_query_service)`
+2. 递归解析 `get_query_service` 的依赖（6个参数都带 `Depends`）
+3. 递归到最底层 `get_meta_session`（无其它依赖），创建 session
+4. 从底向上构建：session → Repository → QueryService
+5. 注入路由函数执行
+6. 请求结束后逆序清理
+
+#### 与 Client Manager 的关系
+
+项目中的资源分两层：
+
+```python
+# 应用级单例（lifespan 管理）：连接池
+class QdrantClientManager:
+    _client: QdrantClient | None = None
+    def init(self): self._client = QdrantClient(...)
+    @property
+    def client(self): return self._client
+
+# 请求级创建（Depends 管理）：Repository
+async def get_column_qdrant_repository():
+    return ColumnQdrantRepository(qdrant_client_manager.client)
+    #                           ^^^^ 共享同一个 client 实例
+```
+
+| 范围 | 创建时机 | 项目中的例子 |
+|------|---------|-------------|
+| 应用级 | `lifespan` init | 所有 `ClientManager`（连接池） |
+| 请求级 | `Depends()` | session、Repository（带事务隔离） |
+
+---
+
+### 4. 流式响应 + SSE（query_router.py + query_service.py）
+
+> 详细参考：
+> - Obsidian 知识库 `FastAPI/01 - 流式响应（StreamingResponse）.md`
+> - Obsidian 知识库 `FastAPI/02 - SSE（Server-Sent Events）协议.md`
+
+#### 路由层
+
+```python
+@query_router.post("/api/query")
+async def query_handler(
+    query: QuerySchema,
+    query_service: Annotated[QueryService, Depends(get_query_service)]
+):
+    return StreamingResponse(
+        query_service.query(query.query),      # 异步生成器
+        media_type="text/event-stream"          # SSE 协议
+    )
+```
+
+`StreamingResponse` 与普通响应对比：
+
+| 特性 | JSONResponse | StreamingResponse |
+|------|-------------|-------------------|
+| 响应体构建 | 全部在内存中组装完成 | 边生成边发送 |
+| 适用场景 | 短请求 | 长时间运行（如 LLM 推理） |
+| 内存占用 | 和响应体大小成正比 | 基本恒定 |
+| 前端体验 | 等待全部完成 | 逐步展示进度 |
+
+#### 服务层
+
+```python
+async def query(self, query: str):
+    state = DataAgentState(query=query)
+    context = DataAgentContext(column_qdrant_repository=self.column_qdrant_repository,
+                               embedding_client=self.embedding_client,
+                               metric_qdrant_repository=self.metric_qdrant_repository,
+                               value_es_repository=self.value_es_repository,
+                               meta_mysql_repository=self.mata_mysql_repository,
+                               dw_mysql_repository=self.dw_mysql_repository)
+    async for chunk in graph.astream(input=state, context=context, stream_mode='custom'):
+        yield f"data: {chunk}\n\n" # SSE协议格式
+```
+
+- `async def` + `yield` = **异步生成器**
+- LangGraph 的 `astream(stream_mode='custom')` 模式下，每个 `writer("xxx")` 调用产生一个 chunk
+- **项目手动拼接了 SSE 协议格式**：`f"data: {chunk}\n\n"`，每个 chunk 直接按 SSE 规范包装为 `data:` 行
+- `yield` 出去的已经是完整的 SSE 消息字符串，FastAPI/Starlette 不需要额外处理协议格式
+
+#### SSE 协议格式
+
+SSE（Server-Sent Events）是一种**服务器向客户端推送**的 HTTP 协议：
+
+```http
+Content-Type: text/event-stream
+Cache-Control: no-cache
+Connection: keep-alive
+
+data: 抽取关键词\n\n
+data: 正在生成SQL\n\n
+data: SELECT ...\n\n
+data: [DONE]\n\n
+```
+
+| 特性 | SSE | WebSocket |
+|------|-----|-----------|
+| 传输方向 | 服务器 → 客户端（单向） | 双向 |
+| 协议 | HTTP | 独立（ws://） |
+| 自动重连 | 浏览器原生支持 | 手动实现 |
+| 复杂度 | 简单 | 复杂 |
+
+**选择 SSE 的理由**：项目只需要服务器向客户端推送进度，不需要反向通信。SSE 比 WebSocket 轻量。
+
+#### 流式响应的底层原理
+
+```python
+# Starlette 内部（简化）
+async def stream_response(self, send):
+    async for chunk in self.body_iterator:
+        await send({
+            "type": "http.response.body",
+            "body": chunk,
+            "more_body": True      # 还有更多数据
+        })
+    await send({
+        "type": "http.response.body",
+        "body": b"",
+        "more_body": False         # 流结束
+    })
+```
+
+#### ⚠️ 注意事项
+
+1. **生成器必须是 `async def`**，否则无法在事件循环中正确 yield
+2. **连接断开**：前端断开时生成器可能继续运行
+3. **中间件不能包装流式响应**：`call_next` 在路由返回 `StreamingResponse` 对象后就返回，不会等待流结束
+4. **前端消费**：因为用 POST，不能直接用 `EventSource`（只支持 GET），需用 `fetch` + `ReadableStream`
+
+#### 前端消费 SSE（POST 模式）
+
+```javascript
+const response = await fetch('/api/query', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query: "统计华北地区销售总额" })
+});
+const reader = response.body.getReader();
+// 逐块读取并渲染
+```
+
+---
+
+### 5. 中间件（Middleware）
+
+> 详细参考：Obsidian 知识库 `FastAPI/05 - 中间件（Middleware）.md`
+
+#### 概念
+
+中间件是在**请求到达路由之前、响应返回客户端之后**执行的钩子。
+
+```
+请求 → 中间件1(前) → 中间件2(前) → 路由 → 中间件2(后) → 中间件1(后) → 响应
+```
+
+这就是 **洋葱模型**。
+
+#### 基本用法
+
+```python
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start = time.time()
+    response = await call_next(request)   # 调用下一个中间件 / 路由
+    duration = time.time() - start
+    logger.info(f"{request.method} {request.url.path} {duration:.2f}s")
+    return response
+```
+
+- 必须 `await call_next(request)`，否则请求无法继续
+- 必须返回 `response`
+
+#### 项目当前状态
+
+项目**暂未使用自定义中间件**。未来可以考虑：
+
+1. **CORS 中间件**：如果前端不同源
+2. **请求日志中间件**：记录所有 API 请求耗时
+3. **全局错误处理中间件**：捕获未预期异常
+4. **API Key 认证中间件**：检查请求头中的 API Key
+
+#### ⚠️ StreamingResponse 与中间件的交互
+
+当用 `StreamingResponse` 时，中间件的 `call_next` 在路由**返回响应对象时**就立即返回，**不会等待流式传输结束**：
+
+```python
+# 中间件中
+response = await call_next(request)
+# ↑ 此时 StreamingResponse 对象已返回，但可能还在流式发送数据
+# 中间件不能测量真正的总处理时间
+```
+
+---
+
+### 6. 运行方式
+
+```bash
+fastapi dev main.py        # 生产推荐：热重载 + 自动发现
+```
+
+`fastapi dev` 与手动 `__main__` 的对比：
+
+| 方式 | 生命周期 | session 管理 | 适用场景 |
+|------|---------|-------------|---------|
+| `fastapi dev` | `lifespan` 自动 init/close | FastAPI 依赖注入自动管理 | 生产/API 服务 |
+| `graph.py __main__` | 手动 init/close | `async with session` 包裹 graph | 本地调试/测试 |
+
+### 7. 踩坑记录（FastAPI 相关）
+
+| 问题 | 现象 | 原因 | 解决 |
+|------|------|------|------|
+| 导入错误的 `Annotated` | FastAPIError: 非法的 Pydantic 字段类型 | `from sqlalchemy.sql.annotation import Annotated` 导入了 SQLAlchemy 内部类 | 改为 `from typing import Annotated` |
+| jieba 收到 Pydantic 对象 | AttributeError: no 'decode' | `query_service.query(query)` 传了整个 `QuerySchema` 对象 | `query_service.query(query.query)` |
+| `correct_sql` 缺 return | 修正后的 SQL 未更新 state | LLM 调用后没有 return | 加上 `return {"sql": result}` |
+| prompt 加载乱码 | UnicodeDecodeError | Windows 默认 GBK | `read_text(encoding="utf-8")` |
 
 ## 关键技术点
 
@@ -568,6 +966,9 @@ await meta_mysql_client_manager.close()
 | `None` not iterable | TypeError | `get_key_columns_by_table_id` 返回 `None` | 加 `if key_columns is None: continue` 守卫 |
 | `merge_retrieved_info` 返回缺少 `table_infos`/`metric_infos` | state 中没有对应字段 | node 只返回了 `retrieved_*` 等原始数据，未组装成最终格式 | 确保 node 输出直接是 `{"table_infos": ..., "metric_infos": ...}` |
 | 筛选后 table 数据未覆盖 state | 下游拿到的仍是全量数据 | `filter_table` 只打印了日志，未更新 state | 加上 `return {"table_infos": filtered_table_infos}` |
+| 导入错误的 `Annotated` | FastAPIError: 非法的 Pydantic 字段类型 | `from sqlalchemy.sql.annotation import Annotated` 导入了 SQLAlchemy 内部类，而非 `typing.Annotated` | 改为 `from typing import Annotated` |
+| jieba 收到 Pydantic 对象而非字符串 | AttributeError: 'QuerySchema' object has no attribute 'decode' | `query_router` 将整个 `QuerySchema` 对象传给了 `query_service.query(query)`，存入 state 后 jieba 获取到的是对象而非 `query` 字段 | `query_service.query(query.query)` 传递字符串 |
+| `correct_sql` 缺少 `return` | 修正后的 SQL 未更新到 state | `correct_sql()` 调用了 LLM 但没 return | 加上 `return {"sql": result}` |
 
 ---
 
