@@ -1,2 +1,2 @@
--Qdrant构建字段名向量索引
--ElasticSearch构建字段值全文索引
+Qdrant构建字段名向量索引
+ElasticSearch构建字段值全文索引
